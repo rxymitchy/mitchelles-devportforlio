@@ -116,6 +116,10 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-subtle": "linear-gradient(to right, var(--background), var(--accent), var(--background))",
+        "hero-pattern": "linear-gradient(135deg, rgba(147,39,143,0.9) 0%, rgba(234,172,232,0.8) 50%, rgba(246,219,245,0.7) 100%)",
+        "purple-gradient": "linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)",
+        "blue-gradient": "linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%)",
+        "orange-gradient": "linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)"
       },
       boxShadow: {
         glass: "0 4px 20px -6px rgba(0, 0, 0, 0.1)",

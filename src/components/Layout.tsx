@@ -14,7 +14,7 @@ const Layout = () => {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <AnimatePresence mode="wait">
         <motion.main
