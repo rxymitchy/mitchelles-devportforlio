@@ -1,0 +1,236 @@
+
+// Project data
+export const projects = [
+  {
+    id: 1,
+    title: "Book Borrowing Nook",
+    description: "A MERN stack application for managing book borrowing with user authentication and admin dashboard.",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/rxymitchy/book-borrowing-nook",
+    live: "",
+  },
+  {
+    id: 2,
+    title: "MERNGalaxy Shop",
+    description: "E-commerce platform built with MERN stack featuring product catalog, cart management, and payment integration.",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
+    github: "https://github.com/rxymitchy/merngalaxy-shop",
+    live: "",
+  },
+  {
+    id: 3,
+    title: "Land Resource Utilization",
+    description: "Flask-based web application for land resource management and utilization tracking.",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2232&q=80",
+    tags: ["Python", "Flask", "SQLite", "GIS"],
+    github: "https://github.com/rxymitchy/LandResourceUtilizationFlask",
+    live: "",
+  },
+  {
+    id: 4,
+    title: "MalPrime Scents",
+    description: "Shopify e-commerce store for a premium scent and fragrance brand with custom theme and product showcase.",
+    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["Shopify", "E-commerce", "Liquid", "JavaScript"],
+    github: "",
+    live: "https://malprimescents.myshopify.com/",
+  },
+  {
+    id: 5,
+    title: "Info Amulaw",
+    description: "WordPress website for information and legal resources with custom content management.",
+    image: "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["WordPress", "PHP", "CSS", "Legal"],
+    github: "",
+    live: "https://infoamulaw.wordpress.com/",
+  },
+  {
+    id: 6,
+    title: "Purity Mureithi Advocates",
+    description: "Professional WordPress website for a law firm with appointment scheduling and resource library.",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["WordPress", "PHP", "JavaScript", "Legal"],
+    github: "",
+    live: "https://puritymureithiadvocates.wordpress.com/",
+  },
+];
+
+// Skills data
+export const skills = [
+  {
+    category: "Frontend",
+    items: [
+      { name: "React", level: 90, color: "bg-blue-500" },
+      { name: "Next.js", level: 85, color: "bg-black" },
+      { name: "HTML/CSS", level: 95, color: "bg-orange-500" },
+      { name: "JavaScript", level: 90, color: "bg-yellow-500" },
+      { name: "TypeScript", level: 80, color: "bg-blue-600" },
+      { name: "Tailwind CSS", level: 85, color: "bg-cyan-500" },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", level: 85, color: "bg-green-600" },
+      { name: "Express", level: 85, color: "bg-gray-600" },
+      { name: "MongoDB", level: 80, color: "bg-green-500" },
+      { name: "REST API", level: 90, color: "bg-indigo-500" },
+      { name: "Python", level: 75, color: "bg-blue-500" },
+      { name: "Flask", level: 70, color: "bg-gray-800" },
+    ],
+  },
+  {
+    category: "CMS & E-commerce",
+    items: [
+      { name: "WordPress", level: 90, color: "bg-blue-700" },
+      { name: "Shopify", level: 85, color: "bg-green-700" },
+      { name: "Webflow", level: 80, color: "bg-blue-500" },
+      { name: "Wix", level: 85, color: "bg-indigo-400" },
+    ],
+  },
+  {
+    category: "Other",
+    items: [
+      { name: "Git/GitHub", level: 90, color: "bg-gray-700" },
+      { name: "CI/CD", level: 80, color: "bg-purple-600" },
+      { name: "AWS", level: 70, color: "bg-orange-600" },
+      { name: "AI Integration", level: 75, color: "bg-purple-700" },
+      { name: "UI/UX Design", level: 85, color: "bg-pink-500" },
+    ],
+  },
+];
+
+// Pricing packages
+export const pricingPackages = {
+  portfolio: [
+    {
+      title: "Basic Portfolio",
+      price: "$499",
+      description: "Simple yet effective portfolio website using WordPress/Wix.",
+      popular: false,
+      features: [
+        { text: "Responsive Design", included: true },
+        { text: "Up to 5 Pages", included: true },
+        { text: "Contact Form", included: true },
+        { text: "Basic SEO Setup", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Custom Domain Setup", included: true },
+        { text: "Content Management System", included: true },
+        { text: "Premium Hosting", included: false },
+        { text: "Advanced SEO & Analytics", included: false },
+        { text: "Custom Animations", included: false },
+      ],
+      ctaText: "Get Started",
+    },
+    {
+      title: "Premium Portfolio",
+      price: "$999",
+      description: "High-end portfolio design with Webflow or custom code.",
+      popular: true,
+      features: [
+        { text: "Responsive Design", included: true },
+        { text: "Up to 10 Pages", included: true },
+        { text: "Advanced Contact Form", included: true },
+        { text: "Comprehensive SEO Setup", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Custom Domain Setup", included: true },
+        { text: "Content Management System", included: true },
+        { text: "Premium Hosting", included: true },
+        { text: "Advanced SEO & Analytics", included: true },
+        { text: "Custom Animations", included: true },
+      ],
+      ctaText: "Get Premium",
+    },
+  ],
+  ecommerce: [
+    {
+      title: "Shopify Store",
+      price: "$1,499",
+      description: "Custom Shopify store setup with product management and payment integration.",
+      popular: false,
+      features: [
+        { text: "Responsive Design", included: true },
+        { text: "Product Catalog (up to 50 products)", included: true },
+        { text: "Payment Gateway Integration", included: true },
+        { text: "Inventory Management", included: true },
+        { text: "Order Tracking System", included: true },
+        { text: "SEO Optimization", included: true },
+        { text: "Email Marketing Integration", included: true },
+        { text: "Custom Theme Development", included: true },
+        { text: "Multi-currency Support", included: false },
+        { text: "Advanced Analytics Dashboard", included: false },
+      ],
+      ctaText: "Start Selling",
+    },
+  ],
+  custom: [
+    {
+      title: "MERN Stack Solution",
+      price: "$2,999+",
+      description: "Scalable web applications built with MongoDB, Express, React, and Node.js.",
+      popular: false,
+      features: [
+        { text: "Custom Frontend & Backend", included: true },
+        { text: "User Authentication", included: true },
+        { text: "Database Design & Implementation", included: true },
+        { text: "API Development", included: true },
+        { text: "Admin Dashboard", included: true },
+        { text: "Responsive Design", included: true },
+        { text: "Deployment Setup", included: true },
+        { text: "Thorough Documentation", included: true },
+        { text: "Maintenance Support (3 months)", included: true },
+        { text: "Performance Optimization", included: true },
+      ],
+      ctaText: "Request Quote",
+    },
+    {
+      title: "Custom Solution",
+      price: "Custom",
+      description: "Fully tailored development using your preferred technology stack.",
+      popular: true,
+      features: [
+        { text: "Technology Stack of Your Choice", included: true },
+        { text: "Custom Design & Development", included: true },
+        { text: "Database Architecture", included: true },
+        { text: "API Integration", included: true },
+        { text: "Third-party Service Integration", included: true },
+        { text: "Advanced Security Implementation", included: true },
+        { text: "Scalable Infrastructure", included: true },
+        { text: "Comprehensive Documentation", included: true },
+        { text: "Extended Support Options", included: true },
+        { text: "AI/ML Integration", included: true },
+      ],
+      ctaText: "Let's Discuss",
+    },
+  ],
+};
+
+// Testimonials
+export const testimonials = [
+  {
+    id: 1,
+    name: "Jane Cooper",
+    role: "Marketing Director",
+    company: "Creative Solutions",
+    content: "Working with this developer was an exceptional experience. Our e-commerce platform was delivered ahead of schedule and exceeded our expectations in terms of design and functionality.",
+    image: "https://randomuser.me/api/portraits/women/12.jpg",
+  },
+  {
+    id: 2,
+    name: "Robert Johnson",
+    role: "CEO",
+    company: "LegalTech Advisors",
+    content: "The WordPress website created for our law firm perfectly captured our professional image while making it easy for clients to find the information they need. Highly recommended!",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    id: 3,
+    name: "Sarah Williams",
+    role: "Product Manager",
+    company: "InnovateTech",
+    content: "The custom MERN application has transformed our internal processes. The attention to detail and willingness to understand our specific requirements made all the difference.",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+];
