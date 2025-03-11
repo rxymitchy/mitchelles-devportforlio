@@ -1,15 +1,11 @@
 
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = () => {
   const { pathname } = useLocation();
 
   // Scroll to top on route change
@@ -29,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
           transition={{ duration: 0.3 }}
           className="flex-grow pt-24 pb-12"
         >
-          {children}
+          <Outlet />
         </motion.main>
       </AnimatePresence>
       <Footer />
