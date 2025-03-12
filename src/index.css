@@ -81,10 +81,6 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
   }
 
-  .text-gradient-purple {
-    @apply bg-clip-text text-transparent bg-purple-gradient;
-  }
-
   .text-gradient-blue {
     @apply bg-clip-text text-transparent bg-blue-gradient;
   }
@@ -125,8 +121,8 @@
     animation-iteration-count: 2;
   }
   
-  .purple-glow {
-    box-shadow: 0 0 15px rgba(147, 39, 143, 0.5);
+  .blue-glow {
+    box-shadow: 0 0 15px rgba(39, 94, 147, 0.5);
   }
   
   .card-hover {
@@ -134,7 +130,7 @@
   }
   
   .card-hover:hover {
-    @apply -translate-y-2 purple-glow;
+    @apply -translate-y-2 blue-glow;
   }
 }
 

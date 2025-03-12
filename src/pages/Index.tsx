@@ -9,7 +9,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute -z-10 top-0 left-0 w-full h-full bg-hero-pattern opacity-20"></div>
+        <div className="absolute -z-10 top-0 left-0 w-full h-full bg-dark-blue-gradient opacity-40"></div>
         <div className="absolute -z-10 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[60vh] bg-gradient-radial from-accent/20 via-accent/5 to-transparent blur-3xl"></div>
         
         <div className="layout-container grid md:grid-cols-2 gap-12 items-center">
@@ -20,7 +20,7 @@ const Index = () => {
             className="order-2 md:order-1"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-gradient">Mitchelle</span> Ashimosi
+              Hi, I'm <span className="text-gradient">Mitchelle</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Software engineer, AI enthusiast, and web developer specializing in
@@ -46,10 +46,10 @@ const Index = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="order-1 md:order-2 flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl purple-glow">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl">
               <img 
                 src="/lovable-uploads/1558977d-b9fc-4321-af70-d70f7223569f.png" 
-                alt="Mitchelle Ashimosi" 
+                alt="Mitchelle" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -67,7 +67,7 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-purple">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-blue">
               My Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute -z-10 top-0 left-0 w-full h-full bg-purple-gradient opacity-10"></div>
+        <div className="absolute -z-10 top-0 left-0 w-full h-full bg-blue-gradient opacity-20"></div>
         <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vh] bg-gradient-radial from-primary/10 via-accent/5 to-transparent blur-3xl"></div>
         
         <div className="layout-container">
@@ -130,7 +130,7 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient-purple">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient-blue">
               Ready to Bring Your Ideas to Life?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
