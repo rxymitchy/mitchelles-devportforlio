@@ -1,3 +1,4 @@
+
 // Project data
 export const projects = [
   {
@@ -29,7 +30,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "MalPrime Scents",
+    title: "Maprime Scents",
     description: "Shopify e-commerce store for a premium scent and fragrance brand with custom theme and product showcase.",
     image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["Shopify", "E-commerce", "Liquid", "JavaScript"],
@@ -38,7 +39,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Info Amulaw",
+    title: "Amulyoto & Co.Advocates",
     description: "WordPress website for information and legal resources with custom content management.",
     image: "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["WordPress", "PHP", "CSS", "Legal"],
@@ -53,6 +54,24 @@ export const projects = [
     tags: ["WordPress", "PHP", "JavaScript", "Legal"],
     github: "",
     live: "https://puritymureithiadvocates.wordpress.com/",
+  },
+  {
+    id: 7,
+    title: "AI Image Generation System",
+    description: "Python-based application using deep learning models for generating realistic images from text descriptions.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["Python", "AI", "Deep Learning", "PyTorch"],
+    github: "https://github.com/rxymitchy/ai-image-generator",
+    live: "",
+  },
+  {
+    id: 8,
+    title: "Sentiment Analysis Tool",
+    description: "Machine learning solution that analyzes customer reviews and social media mentions to determine sentiment.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["Python", "AI", "NLP", "TensorFlow"],
+    github: "https://github.com/rxymitchy/sentiment-analysis-tool",
+    live: "",
   },
 ];
 
@@ -76,7 +95,7 @@ export const skills = [
       { name: "Express", level: 85, color: "bg-gray-600" },
       { name: "MongoDB", level: 80, color: "bg-green-500" },
       { name: "REST API", level: 90, color: "bg-indigo-500" },
-      { name: "Python", level: 75, color: "bg-blue-500" },
+      { name: "Python", level: 95, color: "bg-blue-500" },
       { name: "Flask", level: 70, color: "bg-gray-800" },
     ],
   },
@@ -90,12 +109,21 @@ export const skills = [
     ],
   },
   {
+    category: "AI & ML",
+    items: [
+      { name: "Machine Learning", level: 95, color: "bg-purple-600" },
+      { name: "Natural Language Processing", level: 90, color: "bg-purple-700" },
+      { name: "Computer Vision", level: 85, color: "bg-purple-800" },
+      { name: "Deep Learning", level: 90, color: "bg-purple-500" },
+    ],
+  },
+  {
     category: "Other",
     items: [
       { name: "Git/GitHub", level: 90, color: "bg-gray-700" },
       { name: "CI/CD", level: 80, color: "bg-purple-600" },
       { name: "AWS", level: 70, color: "bg-orange-600" },
-      { name: "AI Integration", level: 75, color: "bg-purple-700" },
+      { name: "AI Integration", level: 95, color: "bg-purple-700" },
       { name: "UI/UX Design", level: 85, color: "bg-pink-500" },
     ],
   },

@@ -31,7 +31,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mitchelle-ashimosi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -40,7 +40,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:lucianamitchell19@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -105,7 +105,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                 >
-                  <span>MalPrime Scents</span>
+                  <span>Maprime Scents</span>
                   <ExternalLink size={14} />
                 </a>
               </li>
@@ -116,7 +116,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                 >
-                  <span>Info Amulaw</span>
+                  <span>Amulyoto & Co.Advocates</span>
                   <ExternalLink size={14} />
                 </a>
               </li>

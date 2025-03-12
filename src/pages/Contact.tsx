@@ -26,12 +26,28 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Create the email content
+    const emailContent = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Subject: ${formData.subject}
+      Message: ${formData.message}
+    `;
+
+    // Using mailto link to send email
+    const mailtoLink = `mailto:lucianamitchell19@gmail.com?subject=${encodeURIComponent(
+      `Portfolio Contact: ${formData.subject}`
+    )}&body=${encodeURIComponent(emailContent)}`;
+
+    // Open the email client
+    window.location.href = mailtoLink;
+
+    // Show success message
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Message prepared!",
+        description: "Your email client should have opened with the message details. If not, please email me directly.",
       });
       setFormData({
         name: "",
@@ -39,7 +55,7 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-    }, 1500);
+    }, 1000);
   };
 
   return (
