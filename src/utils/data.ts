@@ -1,4 +1,3 @@
-
 // Project data
 export const projects = [
   {
@@ -8,7 +7,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     github: "https://github.com/rxymitchy/book-borrowing-nook",
-    live: "",
+    live: "https://book-borrowing-nook.lovable.app/",
   },
   {
     id: 2,
@@ -17,7 +16,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
     github: "https://github.com/rxymitchy/merngalaxy-shop",
-    live: "",
+    live: "https://merngalaxy-shop.lovable.app/",
   },
   {
     id: 3,

@@ -40,7 +40,7 @@ const About = () => {
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/1558977d-b9fc-4321-af70-d70f7223569f.png" 
-                  alt="Mitchelle Ashimosi" 
+                  alt="Mitchelle A." 
                   className="w-full h-auto"
                 />
               </div>
@@ -52,7 +52,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-bold mb-6">Mitchelle Luciana Ashimosi</h2>
+              <h2 className="text-3xl font-bold mb-6">Mitchelle A.</h2>
               <p className="text-lg mb-6">
                 I'm a passionate software engineer, AI enthusiast, and web developer specializing in building scalable systems, AI-integrated applications, and business websites.
               </p>
@@ -113,7 +113,7 @@ const About = () => {
                   description: "Building scalable systems and AI-integrated applications for businesses and individuals.",
                 },
                 {
-                  year: "2022",
+                  year: "2025",
                   icon: <Briefcase className="text-white" />,
                   title: "Full-Stack Developer",
                   description: "Working with MERN stack and other technologies to create full-stack applications.",
