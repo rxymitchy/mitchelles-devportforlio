@@ -1,4 +1,3 @@
-
 // Project data
 export const projects = [
   {
@@ -57,20 +56,11 @@ export const projects = [
   },
   {
     id: 7,
-    title: "AI Image Generation System",
-    description: "Python-based application using deep learning models for generating realistic images from text descriptions.",
+    title: "Stroke Prediction System",
+    description: "Python-based predictive model using machine learning to assess stroke risk based on health parameters.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Python", "AI", "Deep Learning", "PyTorch"],
-    github: "https://github.com/rxymitchy/ai-image-generator",
-    live: "",
-  },
-  {
-    id: 8,
-    title: "Sentiment Analysis Tool",
-    description: "Machine learning solution that analyzes customer reviews and social media mentions to determine sentiment.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Python", "AI", "NLP", "TensorFlow"],
-    github: "https://github.com/rxymitchy/sentiment-analysis-tool",
+    tags: ["Python", "AI", "Machine Learning", "Healthcare"],
+    github: "https://github.com/rxymitchy/Stroke",
     live: "",
   },
 ];
