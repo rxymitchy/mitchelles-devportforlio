@@ -6,6 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Send, Loader2 } from "lucide-react";
+import emailjs from 'emailjs-com';
+
+// Initialize EmailJS with your user ID (we'll use public keys, which is safe for client-side code)
+// These IDs will need to be created in the EmailJS dashboard
+const SERVICE_ID = 'default_service'; // Replace with your service ID after creating account
+const TEMPLATE_ID = 'template_contact'; // Replace with your template ID after creating account
+const USER_ID = 'YOUR_USER_ID'; // Replace with your user ID after creating account
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,18 +37,40 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "lucianamitchell19@gmail.com",
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        USER_ID
+      );
+
+      // Handle success
       toast.success("Message sent successfully! I'll get back to you soon.");
+      
+      // Reset form
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (

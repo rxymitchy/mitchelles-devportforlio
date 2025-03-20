@@ -1,63 +1,9 @@
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { AtSign, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Create the email content
-    const emailContent = `
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Subject: ${formData.subject}
-      Message: ${formData.message}
-    `;
-
-    // Using mailto link to send email
-    const mailtoLink = `mailto:lucianamitchell19@gmail.com?subject=${encodeURIComponent(
-      `Portfolio Contact: ${formData.subject}`
-    )}&body=${encodeURIComponent(emailContent)}`;
-
-    // Open the email client
-    window.location.href = mailtoLink;
-
-    // Show success message
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message prepared!",
-        description: "Your email client should have opened with the message details. If not, please email me directly.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }, 1000);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Contact Hero Section */}
@@ -95,52 +41,7 @@ const Contact = () => {
                 Send Me a Message
               </h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name"
-                    required
-                    className="bg-secondary/30"
-                  />
-                </div>
-                <div>
-                  <Input
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                    className="bg-secondary/30"
-                  />
-                </div>
-                <div>
-                  <Input
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Subject"
-                    required
-                    className="bg-secondary/30"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your Message"
-                    required
-                    className="min-h-32 bg-secondary/30"
-                  />
-                </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+              <ContactForm />
             </motion.div>
             
             <motion.div
