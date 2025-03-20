@@ -1,3 +1,4 @@
+
 // Project data
 export const projects = [
   {
@@ -29,7 +30,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Maprime Scents",
+    title: "Malprime Scents",
     description: "Shopify e-commerce store for a premium scent and fragrance brand with custom theme and product showcase.",
     image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["Shopify", "E-commerce", "Liquid", "JavaScript"],
@@ -47,7 +48,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Purity Mureithi Advocates",
+    title: "Purity Mureithi & Co. Advocates",
     description: "Professional WordPress website for a law firm with appointment scheduling and resource library.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["WordPress", "PHP", "JavaScript", "Legal"],

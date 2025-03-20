@@ -105,7 +105,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                 >
-                  <span>Maprime Scents</span>
+                  <span>Malprime Scents</span>
                   <ExternalLink size={14} />
                 </a>
               </li>
@@ -127,7 +127,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                 >
-                  <span>Purity Mureithi Advocates</span>
+                  <span>Purity Mureithi & Co. Advocates</span>
                   <ExternalLink size={14} />
                 </a>
               </li>
