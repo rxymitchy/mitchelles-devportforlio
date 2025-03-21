@@ -41,21 +41,30 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      console.log("Sending email with the following data:", formData);
+      
       // Prepare template parameters
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
+        to_name: "Luciana Mitchell",
       };
 
-      // Send email using EmailJS
-      const response = await emailjs.send(
+      console.log("Template params:", templateParams);
+      console.log("Using SERVICE_ID:", SERVICE_ID);
+      console.log("Using TEMPLATE_ID:", TEMPLATE_ID);
+
+      // Send email using EmailJS with a more direct approach
+      const response = await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
-        templateParams,
+        e.target as HTMLFormElement,
         USER_ID
       );
+
+      console.log("EmailJS response:", response);
 
       if (response.status === 200) {
         // Handle success
@@ -69,7 +78,7 @@ const ContactForm = () => {
           message: "",
         });
       } else {
-        throw new Error("Failed to send email");
+        throw new Error(`Failed to send email: ${response.text}`);
       }
     } catch (error) {
       console.error("Error sending email:", error);
