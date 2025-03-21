@@ -8,11 +8,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Send, Loader2 } from "lucide-react";
 import emailjs from 'emailjs-com';
 
-// Initialize EmailJS with your user ID (we'll use public keys, which is safe for client-side code)
-// These IDs will need to be created in the EmailJS dashboard
-const SERVICE_ID = 'default_service'; // Replace with your service ID after creating account
-const TEMPLATE_ID = 'template_contact'; // Replace with your template ID after creating account
-const USER_ID = 'YOUR_USER_ID'; // Replace with your user ID after creating account
+// Initialize EmailJS with your user ID
+// Replace these with your actual EmailJS credentials from your EmailJS dashboard
+const SERVICE_ID = 'service_4bkp177'; 
+const TEMPLATE_ID = 'template_m26gxyn';
+const USER_ID = 'u2TY3RJ2jl2orvP7O';
+
+// Initialize EmailJS
+emailjs.init(USER_ID);
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,27 +47,30 @@ const ContactForm = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: "lucianamitchell19@gmail.com",
       };
 
       // Send email using EmailJS
-      await emailjs.send(
+      const response = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         templateParams,
         USER_ID
       );
 
-      // Handle success
-      toast.success("Message sent successfully! I'll get back to you soon.");
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      if (response.status === 200) {
+        // Handle success
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send email");
+      }
     } catch (error) {
       console.error("Error sending email:", error);
       toast.error("Failed to send message. Please try again later.");
