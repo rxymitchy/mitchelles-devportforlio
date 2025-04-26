@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "light";
+      // Default to dark mode if no theme is set
+      return localStorage.getItem("theme") || "dark";
     }
-    return "light";
+    return "dark";
   });
 
   useEffect(() => {
