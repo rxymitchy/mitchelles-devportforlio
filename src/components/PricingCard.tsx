@@ -95,7 +95,7 @@ const PricingCard = ({
         >
           <a href="/contact">{ctaText}</a>
         </Button>
-        <p className="text-xs text-muted-foreground mt-2 text-center">*Pricing is exclusive of app store charges</p>
+        <p className="text-xs text-muted-foreground mt-2 text-center">*Pricing is exclusive of platform charges (WordPress, Shopify, etc.)</p>
       </CardFooter>
     </Card>
   );
