@@ -20,6 +20,7 @@ const Works = () => {
 
   const projectFilters = [
     { id: "all", label: "All Projects" },
+    { id: "python", label: "Python" },
     { id: "react", label: "React" },
     { id: "node", label: "Node.js" },
     { id: "wordpress", label: "WordPress" },

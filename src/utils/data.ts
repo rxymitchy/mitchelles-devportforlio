@@ -186,7 +186,7 @@ export const pricingPackages = {
   custom: [
     {
       title: "MERN Stack Solution",
-      price: "$2,999+",
+      price: "Custom Pricing",
       description: "Scalable web applications built with MongoDB, Express, React, and Node.js.",
       popular: false,
       features: [

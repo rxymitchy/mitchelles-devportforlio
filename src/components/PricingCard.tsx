@@ -48,7 +48,9 @@ const PricingCard = ({
         <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         <div className="mt-2 flex items-baseline gap-1">
           <span className="text-3xl font-bold">{price}</span>
-          {price !== "Custom" && (
+          {price !== "Custom" && 
+           price !== "Custom Pricing" && 
+           price !== "Pricing Varies with Complexity" && (
             <span className="text-muted-foreground font-medium">/project</span>
           )}
         </div>

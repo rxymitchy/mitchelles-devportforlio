@@ -78,7 +78,7 @@ const Pricing = () => {
   const customPackages = [
     {
       title: "MERN Stack Solutions",
-      price: "Ksh 50,000+",
+      price: "Custom Pricing",
       description: "Full-stack applications with MongoDB, Express, React, Node.js",
       features: [
         "Custom Frontend & Backend",
@@ -93,7 +93,7 @@ const Pricing = () => {
     },
     {
       title: "AI Integration",
-      price: "Ksh 50,000+",
+      price: "Custom Pricing",
       description: "Chatbots, predictive models, and other AI solutions",
       features: [
         "Custom AI Model Development",
@@ -108,7 +108,7 @@ const Pricing = () => {
     },
     {
       title: "Client-Specified Tech Stack",
-      price: "Ksh 50,000+",
+      price: "Pricing Varies with Complexity",
       description: "Custom solutions based on your preferred technologies",
       features: [
         "Technology Stack of Your Choice",
