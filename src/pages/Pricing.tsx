@@ -2,8 +2,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Briefcase, Check, ShoppingBag, User } from "lucide-react";
+import { Briefcase, ShoppingBag, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import PricingCard from "@/components/PricingCard";
+import { pricingPackages } from "@/utils/data";
 
 const Pricing = () => {
   const portfolioPackages = [
@@ -12,14 +14,18 @@ const Pricing = () => {
       price: "Ksh 10,000",
       description: "WordPress/Wix (For simple portfolios)",
       features: [
-        "Responsive Design",
-        "Up to 5 Pages",
-        "Contact Form",
-        "Basic SEO Setup",
-        "Social Media Integration",
-        "Custom Domain Setup",
-        "Content Management System",
+        { text: "Responsive Design", included: true },
+        { text: "Up to 5 Pages", included: true },
+        { text: "Contact Form", included: true },
+        { text: "Basic SEO Setup", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Custom Domain Setup", included: true },
+        { text: "Content Management System", included: true },
+        { text: "Premium Hosting", included: false },
+        { text: "Advanced SEO & Analytics", included: false },
+        { text: "Custom Animations", included: false },
       ],
+      ctaText: "Get Started",
       popular: false,
     },
     {
@@ -27,17 +33,18 @@ const Pricing = () => {
       price: "Ksh 20,000",
       description: "Webflow (For high-end, interactive designs)",
       features: [
-        "Responsive Design",
-        "Up to 10 Pages",
-        "Advanced Contact Form",
-        "Comprehensive SEO Setup",
-        "Social Media Integration",
-        "Custom Domain Setup",
-        "Content Management System",
-        "Premium Hosting",
-        "Advanced SEO & Analytics",
-        "Custom Animations",
+        { text: "Responsive Design", included: true },
+        { text: "Up to 10 Pages", included: true },
+        { text: "Advanced Contact Form", included: true },
+        { text: "Comprehensive SEO Setup", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Custom Domain Setup", included: true },
+        { text: "Content Management System", included: true },
+        { text: "Premium Hosting", included: true },
+        { text: "Advanced SEO & Analytics", included: true },
+        { text: "Custom Animations", included: true },
       ],
+      ctaText: "Get Started",
       popular: true,
     },
   ];
@@ -48,14 +55,18 @@ const Pricing = () => {
       price: "Ksh 20,000",
       description: "Custom Shopify store setup & customization",
       features: [
-        "Responsive Design",
-        "Product Catalog (up to 50 products)",
-        "Payment Gateway Integration",
-        "Inventory Management",
-        "Order Tracking System",
-        "SEO Optimization",
-        "Email Marketing Integration",
+        { text: "Responsive Design", included: true },
+        { text: "Product Catalog (up to 50 products)", included: true },
+        { text: "Payment Gateway Integration", included: true },
+        { text: "Inventory Management", included: true },
+        { text: "Order Tracking System", included: true },
+        { text: "SEO Optimization", included: true },
+        { text: "Email Marketing Integration", included: true },
+        { text: "Custom Theme Integration", included: true },
+        { text: "Multi-currency Support", included: false },
+        { text: "Advanced Analytics Dashboard", included: false },
       ],
+      ctaText: "Start Selling",
       popular: false,
     },
     {
@@ -63,14 +74,15 @@ const Pricing = () => {
       price: "Ksh 20,000",
       description: "WordPress with WooCommerce integration",
       features: [
-        "Responsive Design",
-        "Product Catalog Setup",
-        "Payment Gateway Integration",
-        "Inventory Management",
-        "Order Management",
-        "SEO Optimization",
-        "Custom Theme Integration",
+        { text: "Responsive Design", included: true },
+        { text: "Product Catalog Setup", included: true },
+        { text: "Payment Gateway Integration", included: true },
+        { text: "Inventory Management", included: true },
+        { text: "Order Management", included: true },
+        { text: "SEO Optimization", included: true },
+        { text: "Custom Theme Integration", included: true },
       ],
+      ctaText: "Start Selling",
       popular: false,
     },
   ];
@@ -81,14 +93,15 @@ const Pricing = () => {
       price: "Custom Pricing",
       description: "Full-stack applications with MongoDB, Express, React, Node.js",
       features: [
-        "Custom Frontend & Backend",
-        "User Authentication",
-        "Database Design & Implementation",
-        "API Development",
-        "Admin Dashboard",
-        "Responsive Design",
-        "Deployment Setup",
+        { text: "Custom Frontend & Backend", included: true },
+        { text: "User Authentication", included: true },
+        { text: "Database Design & Implementation", included: true },
+        { text: "API Development", included: true },
+        { text: "Admin Dashboard", included: true },
+        { text: "Responsive Design", included: true },
+        { text: "Deployment Setup", included: true },
       ],
+      ctaText: "Request Quote",
       popular: false,
     },
     {
@@ -96,14 +109,15 @@ const Pricing = () => {
       price: "Custom Pricing",
       description: "Chatbots, predictive models, and other AI solutions",
       features: [
-        "Custom AI Model Development",
-        "Integration with Existing Systems",
-        "Chatbot Development",
-        "Data Analysis & Reporting",
-        "Predictive Modeling",
-        "Machine Learning Integration",
-        "Ongoing Support & Maintenance",
+        { text: "Custom AI Model Development", included: true },
+        { text: "Integration with Existing Systems", included: true },
+        { text: "Chatbot Development", included: true },
+        { text: "Data Analysis & Reporting", included: true },
+        { text: "Predictive Modeling", included: true },
+        { text: "Machine Learning Integration", included: true },
+        { text: "Ongoing Support & Maintenance", included: true },
       ],
+      ctaText: "Let's Discuss",
       popular: true,
     },
     {
@@ -111,14 +125,15 @@ const Pricing = () => {
       price: "Custom Pricing",
       description: "Custom solutions based on your preferred technologies",
       features: [
-        "Technology Stack of Your Choice",
-        "Custom Design & Development",
-        "Database Architecture",
-        "API Integration",
-        "Third-party Service Integration",
-        "Advanced Security Implementation",
-        "Comprehensive Documentation",
+        { text: "Technology Stack of Your Choice", included: true },
+        { text: "Custom Design & Development", included: true },
+        { text: "Database Architecture", included: true },
+        { text: "API Integration", included: true },
+        { text: "Third-party Service Integration", included: true },
+        { text: "Advanced Security Implementation", included: true },
+        { text: "Comprehensive Documentation", included: true },
       ],
+      ctaText: "Get in Touch",
       popular: false,
     },
   ];
@@ -171,32 +186,16 @@ const Pricing = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`glass p-8 relative ${
-                      pkg.popular ? "border-primary/30 shadow-lg" : ""
-                    }`}
                   >
-                    {pkg.popular && (
-                      <div className="absolute -top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
-                        Popular
-                      </div>
-                    )}
-                    
-                    <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                    <div className="text-3xl font-bold mb-2">{pkg.price}</div>
-                    <p className="text-muted-foreground mb-6">{pkg.description}</p>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {pkg.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <Check size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Link to="/contact">
-                      <Button className="w-full">Get Started</Button>
-                    </Link>
+                    <PricingCard 
+                      title={pkg.title}
+                      price={pkg.price}
+                      description={pkg.description}
+                      features={pkg.features}
+                      ctaText={pkg.ctaText}
+                      popular={pkg.popular}
+                      delay={index * 100}
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -211,32 +210,16 @@ const Pricing = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`glass p-8 relative ${
-                      pkg.popular ? "border-primary/30 shadow-lg" : ""
-                    }`}
                   >
-                    {pkg.popular && (
-                      <div className="absolute -top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
-                        Popular
-                      </div>
-                    )}
-                    
-                    <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                    <div className="text-3xl font-bold mb-2">{pkg.price}</div>
-                    <p className="text-muted-foreground mb-6">{pkg.description}</p>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {pkg.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <Check size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Link to="/contact">
-                      <Button className="w-full">Get Started</Button>
-                    </Link>
+                    <PricingCard 
+                      title={pkg.title}
+                      price={pkg.price}
+                      description={pkg.description}
+                      features={pkg.features}
+                      ctaText={pkg.ctaText}
+                      popular={pkg.popular}
+                      delay={index * 100}
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -251,32 +234,16 @@ const Pricing = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`glass p-8 relative ${
-                      pkg.popular ? "border-primary/30 shadow-lg" : ""
-                    }`}
                   >
-                    {pkg.popular && (
-                      <div className="absolute -top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
-                        Popular
-                      </div>
-                    )}
-                    
-                    <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                    <div className="text-3xl font-bold mb-2">{pkg.price}</div>
-                    <p className="text-muted-foreground mb-6">{pkg.description}</p>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {pkg.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <Check size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Link to="/contact">
-                      <Button className="w-full">Get Started</Button>
-                    </Link>
+                    <PricingCard 
+                      title={pkg.title}
+                      price={pkg.price}
+                      description={pkg.description}
+                      features={pkg.features}
+                      ctaText={pkg.ctaText}
+                      popular={pkg.popular}
+                      delay={index * 100}
+                    />
                   </motion.div>
                 ))}
               </div>

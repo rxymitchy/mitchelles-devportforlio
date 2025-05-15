@@ -50,7 +50,7 @@ const PricingCard = ({
       <CardHeader className="pb-0">
         <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         <div className="mt-2 flex items-baseline gap-1">
-          <span className={`font-bold ${isCustomPricing ? 'text-lg' : 'text-3xl'}`}>{price}</span>
+          <span className={`font-bold ${isCustomPricing ? 'text-sm' : 'text-3xl'}`}>{price}</span>
           {price !== "Custom" && 
            price !== "Custom Pricing" && 
            price !== "Pricing Varies with Complexity" && (
@@ -86,7 +86,7 @@ const PricingCard = ({
         </ul>
       </CardContent>
 
-      <CardFooter className="pt-2">
+      <CardFooter className="pt-2 flex-col">
         <Button
           className={`w-full ${
             popular ? "bg-primary hover:bg-primary/90" : ""
@@ -95,6 +95,7 @@ const PricingCard = ({
         >
           <a href="/contact">{ctaText}</a>
         </Button>
+        <p className="text-xs text-muted-foreground mt-2 text-center">*Pricing is exclusive of app store charges</p>
       </CardFooter>
     </Card>
   );
