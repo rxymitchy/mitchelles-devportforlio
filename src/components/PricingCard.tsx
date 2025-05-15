@@ -17,6 +17,7 @@ interface PricingCardProps {
   ctaText: string;
   popular?: boolean;
   delay?: number;
+  showPricingDisclaimer?: boolean;
 }
 
 const PricingCard = ({
@@ -27,6 +28,7 @@ const PricingCard = ({
   ctaText,
   popular = false,
   delay = 0,
+  showPricingDisclaimer = true,
 }: PricingCardProps) => {
   // Check if the price is a custom pricing text
   const isCustomPricing = price === "Custom Pricing" || price === "Custom" || price === "Pricing Varies with Complexity";
@@ -95,7 +97,9 @@ const PricingCard = ({
         >
           <a href="/contact">{ctaText}</a>
         </Button>
-        <p className="text-xs text-muted-foreground mt-2 text-center">*Pricing is exclusive of platform charges (WordPress, Shopify, etc.)</p>
+        {showPricingDisclaimer && (
+          <p className="text-xs text-muted-foreground mt-2 text-center">*Pricing is exclusive of platform charges (WordPress, Shopify, etc.)</p>
+        )}
       </CardFooter>
     </Card>
   );

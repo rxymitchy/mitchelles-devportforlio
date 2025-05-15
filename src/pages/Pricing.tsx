@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,6 +26,7 @@ const Pricing = () => {
       ],
       ctaText: "Get Started",
       popular: false,
+      showPricingDisclaimer: true,
     },
     {
       title: "Premium Package",
@@ -46,6 +46,7 @@ const Pricing = () => {
       ],
       ctaText: "Get Started",
       popular: true,
+      showPricingDisclaimer: true,
     },
   ];
 
@@ -68,6 +69,7 @@ const Pricing = () => {
       ],
       ctaText: "Start Selling",
       popular: false,
+      showPricingDisclaimer: true,
     },
     {
       title: "WooCommerce Development",
@@ -84,6 +86,7 @@ const Pricing = () => {
       ],
       ctaText: "Start Selling",
       popular: false,
+      showPricingDisclaimer: true,
     },
   ];
 
@@ -103,6 +106,7 @@ const Pricing = () => {
       ],
       ctaText: "Request Quote",
       popular: false,
+      showPricingDisclaimer: false,
     },
     {
       title: "AI Integration",
@@ -119,6 +123,7 @@ const Pricing = () => {
       ],
       ctaText: "Let's Discuss",
       popular: true,
+      showPricingDisclaimer: false,
     },
     {
       title: "Client-Specified Tech Stack",
@@ -135,6 +140,7 @@ const Pricing = () => {
       ],
       ctaText: "Get in Touch",
       popular: false,
+      showPricingDisclaimer: false,
     },
   ];
 
@@ -195,6 +201,7 @@ const Pricing = () => {
                       ctaText={pkg.ctaText}
                       popular={pkg.popular}
                       delay={index * 100}
+                      showPricingDisclaimer={pkg.showPricingDisclaimer}
                     />
                   </motion.div>
                 ))}
@@ -219,6 +226,7 @@ const Pricing = () => {
                       ctaText={pkg.ctaText}
                       popular={pkg.popular}
                       delay={index * 100}
+                      showPricingDisclaimer={pkg.showPricingDisclaimer}
                     />
                   </motion.div>
                 ))}
@@ -243,6 +251,7 @@ const Pricing = () => {
                       ctaText={pkg.ctaText}
                       popular={pkg.popular}
                       delay={index * 100}
+                      showPricingDisclaimer={pkg.showPricingDisclaimer}
                     />
                   </motion.div>
                 ))}
