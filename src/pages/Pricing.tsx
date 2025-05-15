@@ -108,7 +108,7 @@ const Pricing = () => {
     },
     {
       title: "Client-Specified Tech Stack",
-      price: "Pricing Varies with Complexity",
+      price: "Custom Pricing",
       description: "Custom solutions based on your preferred technologies",
       features: [
         "Technology Stack of Your Choice",

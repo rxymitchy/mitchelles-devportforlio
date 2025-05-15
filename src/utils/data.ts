@@ -1,4 +1,3 @@
-
 // Project data
 export const projects = [
   {
@@ -205,7 +204,7 @@ export const pricingPackages = {
     },
     {
       title: "Custom Solution",
-      price: "Custom",
+      price: "Custom Pricing",
       description: "Fully tailored development using your preferred technology stack.",
       popular: true,
       features: [

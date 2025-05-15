@@ -113,7 +113,7 @@ const About = () => {
                   description: "Building scalable systems and AI-integrated applications for businesses and individuals.",
                 },
                 {
-                  year: "2025",
+                  year: "2024",
                   icon: <Briefcase className="text-white" />,
                   title: "Full-Stack Developer",
                   description: "Working with MERN stack and other technologies to create full-stack applications.",
@@ -122,7 +122,7 @@ const About = () => {
                   year: "2020",
                   icon: <GraduationCap className="text-white" />,
                   title: "Web Development Journey",
-                  description: "Started exploring web development with HTML, CSS, JavaScript, and modern frameworks.",
+                  description: "Started exploring web development with HTML, CSS, JavaScript, WordPress, and modern frameworks.",
                 },
               ].map((item, index) => (
                 <motion.div

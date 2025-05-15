@@ -28,6 +28,9 @@ const PricingCard = ({
   popular = false,
   delay = 0,
 }: PricingCardProps) => {
+  // Check if the price is a custom pricing text
+  const isCustomPricing = price === "Custom Pricing" || price === "Custom" || price === "Pricing Varies with Complexity";
+  
   return (
     <Card
       className={`border backdrop-blur-sm h-full flex flex-col transition-all duration-300 animate-fade-in-up ${
@@ -47,7 +50,7 @@ const PricingCard = ({
       <CardHeader className="pb-0">
         <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         <div className="mt-2 flex items-baseline gap-1">
-          <span className="text-3xl font-bold">{price}</span>
+          <span className={`font-bold ${isCustomPricing ? 'text-lg' : 'text-3xl'}`}>{price}</span>
           {price !== "Custom" && 
            price !== "Custom Pricing" && 
            price !== "Pricing Varies with Complexity" && (
