@@ -13,6 +13,7 @@ import emailjs from 'emailjs-com';
 const SERVICE_ID = 'service_4bkp177'; 
 const TEMPLATE_ID = 'template_m26gxyn';
 const USER_ID = 'u2TY3RJ2jl2orvP7O';
+const RECIPIENT_EMAIL = 'lucianamitchell19@gmail.com';
 
 // Initialize EmailJS
 emailjs.init(USER_ID);
@@ -50,6 +51,7 @@ const ContactForm = () => {
         subject: formData.subject,
         message: formData.message,
         to_name: "Luciana Mitchell",
+        to_email: RECIPIENT_EMAIL,
       };
 
       console.log("Template params:", templateParams);
@@ -57,10 +59,10 @@ const ContactForm = () => {
       console.log("Using TEMPLATE_ID:", TEMPLATE_ID);
 
       // Send email using EmailJS with a more direct approach
-      const response = await emailjs.sendForm(
+      const response = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
-        e.target as HTMLFormElement,
+        templateParams,
         USER_ID
       );
 
