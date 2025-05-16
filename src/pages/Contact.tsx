@@ -26,23 +26,45 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16">
+      {/* Contact Info Section with Image */}
+      <section className="py-8 md:py-16">
         <div className="layout-container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="glass p-8 mb-8 rounded-xl"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Contact Information
-              </h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Image Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="order-2 md:order-1"
+              >
+                <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                    alt="Workspace with laptop and notepad" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <p className="text-lg font-medium text-white">Ready to start your next project?</p>
+                  </div>
+                </div>
+              </motion.div>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-8">
+              {/* Contact Info Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="glass p-8 rounded-xl order-1 md:order-2"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                  Contact Information
+                </h2>
+                
+                <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6 text-primary" />
@@ -71,9 +93,7 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-                </div>
-                
-                <div className="space-y-8">
+                  
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Github className="h-6 w-6 text-primary" />
@@ -90,42 +110,9 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <AtSign className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium mb-1">Social</h3>
-                      <p className="text-muted-foreground">
-                        Find me on social media platforms
-                      </p>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="glass p-8 rounded-xl"
-            >
-              <h3 className="text-xl font-semibold mb-5">Let's Connect</h3>
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Whether you have a specific project in mind, want to discuss a potential collaboration, or just have questions about my services, I'm here to help. Feel free to reach out through any of the channels above, and I'll get back to you as soon as possible.
-                </p>
-                <p className="text-muted-foreground">
-                  I specialize in creating modern, responsive web applications that deliver exceptional user experiences. My expertise includes front-end development, e-commerce solutions, and custom web applications.
-                </p>
-                <p className="text-muted-foreground">
-                  Looking forward to working with you to bring your ideas to life!
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
