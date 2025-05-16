@@ -9,7 +9,6 @@ import { Send, Loader2 } from "lucide-react";
 import emailjs from 'emailjs-com';
 
 // Initialize EmailJS with your user ID
-// Replace these with your actual EmailJS credentials from your EmailJS dashboard
 const SERVICE_ID = 'service_4bkp177'; 
 const TEMPLATE_ID = 'template_m26gxyn';
 const USER_ID = 'u2TY3RJ2jl2orvP7O';
@@ -44,7 +43,7 @@ const ContactForm = () => {
     try {
       console.log("Sending email with the following data:", formData);
       
-      // Prepare template parameters
+      // Prepare template parameters - making sure to match expected EmailJS template variables
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -52,18 +51,16 @@ const ContactForm = () => {
         message: formData.message,
         to_name: "Luciana Mitchell",
         to_email: RECIPIENT_EMAIL,
+        reply_to: formData.email,
       };
 
       console.log("Template params:", templateParams);
-      console.log("Using SERVICE_ID:", SERVICE_ID);
-      console.log("Using TEMPLATE_ID:", TEMPLATE_ID);
-
-      // Send email using EmailJS with a more direct approach
+      
+      // Send email using EmailJS
       const response = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
-        templateParams,
-        USER_ID
+        templateParams
       );
 
       console.log("EmailJS response:", response);
