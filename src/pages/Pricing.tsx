@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -25,7 +26,7 @@ const Pricing = () => {
         { text: "Custom Animations", included: false },
       ],
       ctaText: "Get Started",
-      popular: false,
+      popular: true,
       showPricingDisclaimer: true,
     },
     {
@@ -45,7 +46,7 @@ const Pricing = () => {
         { text: "Custom Animations", included: true },
       ],
       ctaText: "Get Started",
-      popular: true,
+      popular: false,
       showPricingDisclaimer: true,
     },
   ];
@@ -68,7 +69,7 @@ const Pricing = () => {
         { text: "Advanced Analytics Dashboard", included: false },
       ],
       ctaText: "Start Selling",
-      popular: false,
+      popular: true,
       showPricingDisclaimer: true,
     },
     {
