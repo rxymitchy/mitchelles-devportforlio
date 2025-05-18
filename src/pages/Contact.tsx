@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { AtSign, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { AtSign, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -26,12 +26,12 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Info Section with Image */}
+      {/* Contact Info Section with Animated Image */}
       <section className="py-8 md:py-16">
         <div className="layout-container">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Image Column */}
+              {/* Animated Image Column */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -40,14 +40,41 @@ const Contact = () => {
                 className="order-2 md:order-1"
               >
                 <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                    alt="Workspace with laptop and notepad" 
+                  <motion.img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                    alt="Professional workspace with laptop" 
                     className="w-full h-full object-cover"
+                    initial={{ scale: 1.1 }}
+                    animate={{ 
+                      scale: [1.1, 1, 1.05, 1],
+                      y: [0, -5, 0, -3, 0],
+                    }}
+                    transition={{ 
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      duration: 10,
+                      ease: "easeInOut" 
+                    }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"
+                    initial={{ opacity: 0.5 }}
+                    animate={{ opacity: [0.5, 0.7, 0.5] }}
+                    transition={{ 
+                      repeat: Infinity,
+                      duration: 3,
+                      ease: "easeInOut" 
+                    }}
+                  />
                   <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-lg font-medium text-white">Ready to start your next project?</p>
+                    <motion.p 
+                      className="text-lg font-medium text-white"
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.5, duration: 0.5 }}
+                    >
+                      Ready to start your next project?
+                    </motion.p>
                   </div>
                 </div>
               </motion.div>
