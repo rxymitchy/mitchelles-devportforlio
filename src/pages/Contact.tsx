@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { AtSign, Github, Linkedin, Mail } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="layout-container text-center max-w-3xl mx-auto"
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -24,136 +25,123 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      {/* Contact Info Section with Multi-Project Animated Display */}
+      {/* Contact Info Section with Actual Website Display */}
       <section className="py-8 md:py-16">
         <div className="layout-container">
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Professional Multi-Project Animated Display */}
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Actual Website Display with Smooth Animations */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="order-2 md:order-1"
               >
                 <div className="relative h-[400px] rounded-2xl shadow-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/5 border border-white/10">
-                  {/* Project Showcase - Animated Stack of Projects */}
-                  <div className="absolute inset-0 p-4">
-                    {/* Project 1 - Mobile App */}
+                  {/* Featured Website Display with Browser Frame */}
+                  <div className="absolute inset-0 flex flex-col">
+                    {/* Browser Top Bar */}
                     <motion.div 
-                      className="absolute w-[45%] h-[55%] top-[10%] right-[10%] rounded-lg shadow-lg overflow-hidden"
-                      initial={{ x: 20, opacity: 0, rotateY: 10, rotateZ: 2 }}
-                      animate={{ 
-                        x: 0, 
-                        opacity: 1,
-                        rotateY: [10, 0, 5, 0],
-                        rotateZ: [2, 0, 1, 0],
-                        y: [-5, 0, -3, 0]
-                      }}
-                      transition={{ 
-                        duration: 8, 
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut",
-                        delay: 0.2
-                      }}
+                      className="h-8 bg-background/90 border-b border-white/10 flex items-center px-3"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5, duration: 0.6 }}
                     >
-                      <img 
-                        src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                        alt="Mobile app project" 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 p-2">
-                        <p className="text-sm font-medium text-white">Mobile App</p>
+                      <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                        <div className="w-3 h-3 rounded-full bg-green-400" />
+                      </div>
+                      <div className="mx-auto bg-background/50 px-4 py-0.5 rounded text-xs text-muted-foreground">
+                        portfolio.mitchelle-ashimosi.com
                       </div>
                     </motion.div>
+                    
+                    {/* Website Content */}
+                    <div className="flex-1 overflow-hidden relative">
+                      {/* Main Content */}
+                      <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.8, duration: 0.7 }}
+                        className="absolute inset-0"
+                      >
+                        <img 
+                          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                          alt="Portfolio website" 
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Overlay with Content */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-6">
+                          <motion.div 
+                            initial={{ y: 10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 1.2, duration: 0.5 }}
+                          >
+                            <h3 className="text-xl font-bold text-white mb-2">Portfolio Website</h3>
+                            <p className="text-white/80 text-sm">Responsive design with modern animations</p>
+                            
+                            {/* Technologies Used */}
+                            <div className="flex gap-2 mt-3">
+                              {["React", "TypeScript", "Tailwind"].map((tech, index) => (
+                                <motion.span
+                                  key={tech}
+                                  className="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs text-white"
+                                  initial={{ opacity: 0, y: 5 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  transition={{ delay: 1.4 + index * 0.1, duration: 0.5 }}
+                                >
+                                  {tech}
+                                </motion.span>
+                              ))}
+                            </div>
+                          </motion.div>
+                        </div>
+                      </motion.div>
 
-                    {/* Project 2 - Web Dashboard */}
-                    <motion.div 
-                      className="absolute w-[60%] h-[60%] top-[25%] left-[5%] rounded-lg shadow-lg overflow-hidden"
-                      initial={{ y: 20, opacity: 0, rotateY: -5, rotateZ: -1 }}
-                      animate={{ 
-                        y: 0, 
-                        opacity: 1,
-                        rotateY: [-5, 0, -3, 0],
-                        rotateZ: [-1, 0, -0.5, 0],
-                        x: [0, 5, 0, 3]
-                      }}
-                      transition={{ 
-                        duration: 10, 
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut",
-                        delay: 0.5
-                      }}
-                    >
-                      <img 
-                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                        alt="Web dashboard project" 
-                        className="w-full h-full object-cover"
+                      {/* Floating Element Animation */}
+                      <motion.div
+                        className="absolute top-8 right-8 w-16 h-16 bg-accent/20 backdrop-blur-sm rounded-lg border border-white/10"
+                        animate={{ 
+                          y: [0, -8, 0],
+                          rotate: [0, 5, 0],
+                          scale: [1, 1.05, 1]
+                        }}
+                        transition={{ 
+                          duration: 5, 
+                          repeat: Infinity,
+                          repeatType: "reverse",
+                          ease: "easeInOut"
+                        }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-accent/50 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 p-2">
-                        <p className="text-sm font-medium text-white">Analytics Dashboard</p>
-                      </div>
-                    </motion.div>
-
-                    {/* Project 3 - Code Editor */}
-                    <motion.div 
-                      className="absolute w-[50%] h-[40%] top-[5%] left-[15%] rounded-lg shadow-lg overflow-hidden"
-                      initial={{ y: -20, opacity: 0, rotateY: 8, rotateZ: 1 }}
-                      animate={{ 
-                        y: 0, 
-                        opacity: 1,
-                        rotateY: [8, 0, 4, 0],
-                        rotateZ: [1, 0, 0.5, 0],
-                        x: [0, -5, 0, -3]
-                      }}
-                      transition={{ 
-                        duration: 9, 
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <img 
-                        src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                        alt="Code editor project" 
-                        className="w-full h-full object-cover"
+                      
+                      <motion.div
+                        className="absolute bottom-24 left-8 w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full border border-white/10"
+                        animate={{ 
+                          y: [0, 8, 0],
+                          x: [0, 5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 4, 
+                          repeat: Infinity,
+                          repeatType: "reverse",
+                          ease: "easeInOut",
+                          delay: 0.5
+                        }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 p-2">
-                        <p className="text-sm font-medium text-white">Web Application</p>
-                      </div>
-                    </motion.div>
-
-                    {/* Project Light Reflection Effect */}
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"
-                      initial={{ opacity: 0, rotate: -10 }}
-                      animate={{ 
-                        opacity: [0, 0.1, 0.05, 0],
-                        rotate: [-10, 0, 5, -5],
-                        scale: [1, 1.1, 1]
-                      }}
-                      transition={{ 
-                        duration: 10,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut"
-                      }}
-                    />
+                    </div>
                   </div>
 
                   <motion.div 
                     className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent"
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.8, duration: 0.7 }}
+                    transition={{ delay: 1.5, duration: 0.7 }}
                   >
-                    <p className="text-lg font-medium text-white">Ready to bring your ideas to life?</p>
+                    <p className="text-lg font-medium text-white">Ready to bring your vision to life?</p>
                   </motion.div>
                 </div>
               </motion.div>
@@ -163,7 +151,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
                 className="glass p-8 rounded-xl order-1 md:order-2"
               >
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -171,7 +159,13 @@ const Contact = () => {
                 </h2>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
+                  <motion.div 
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
@@ -181,9 +175,15 @@ const Contact = () => {
                         lucianamitchell19@gmail.com
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-start gap-4">
+                  <motion.div 
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Linkedin className="h-6 w-6 text-primary" />
                     </div>
@@ -198,9 +198,15 @@ const Contact = () => {
                         Mitchelle Ashimosi
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-start gap-4">
+                  <motion.div 
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                  >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Github className="h-6 w-6 text-primary" />
                     </div>
@@ -215,12 +221,32 @@ const Contact = () => {
                         rxymitchy
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-12 md:py-16 relative">
+        <div className="absolute -z-10 top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vh] bg-gradient-radial from-primary/10 via-accent/5 to-transparent blur-3xl" />
+        
+        <motion.div 
+          className="layout-container"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="max-w-xl mx-auto text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Send Me a Message</h2>
+            <p className="text-muted-foreground">I'll get back to you as soon as possible</p>
+          </div>
+          
+          <ContactForm />
+        </motion.div>
       </section>
     </div>
   );
