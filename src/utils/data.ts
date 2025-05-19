@@ -63,6 +63,15 @@ export const projects = [
     github: "https://github.com/rxymitchy/Stroke",
     live: "",
   },
+  {
+    id: 8,
+    title: "Species Blog",
+    description: "An informative blog about various species using HTML, CSS, and JavaScript.",
+    image: "https://images.unsplash.com/photo-1550685780-886ba7b2d9c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/PLP-WebTechnologies/feb-2025-final-project-and-deployment-rxymitchy",
+    live: "https://speciesblog.netlify.app/",
+  },
 ];
 
 // Skills data
