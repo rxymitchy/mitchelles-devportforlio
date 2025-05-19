@@ -1,9 +1,30 @@
 
 import { motion } from "framer-motion";
-import { AtSign, Github, Linkedin, Mail } from "lucide-react";
+import { AtSign, Github, Linkedin, Mail, Smartphone, ChartBar, Monitor } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
+  // Animation variants for smoother transitions
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Contact Hero Section */}
@@ -25,123 +46,162 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      {/* Contact Info Section with Actual Website Display */}
-      <section className="py-8 md:py-16">
+      {/* Contact Info Section with Project Showcase */}
+      <section className="py-12 md:py-20">
         <div className="layout-container">
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Actual Website Display with Smooth Animations */}
+            <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Project Showcase with Smooth Animations */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUp}
                 className="order-2 md:order-1"
               >
-                <div className="relative h-[400px] rounded-2xl shadow-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/5 border border-white/10">
-                  {/* Featured Website Display with Browser Frame */}
-                  <div className="absolute inset-0 flex flex-col">
-                    {/* Browser Top Bar */}
-                    <motion.div 
-                      className="h-8 bg-background/90 border-b border-white/10 flex items-center px-3"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5, duration: 0.6 }}
-                    >
-                      <div className="flex gap-1.5">
-                        <div className="w-3 h-3 rounded-full bg-red-400" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                        <div className="w-3 h-3 rounded-full bg-green-400" />
-                      </div>
-                      <div className="mx-auto bg-background/50 px-4 py-0.5 rounded text-xs text-muted-foreground">
-                        portfolio.mitchelle-ashimosi.com
-                      </div>
-                    </motion.div>
-                    
-                    {/* Website Content */}
-                    <div className="flex-1 overflow-hidden relative">
-                      {/* Main Content */}
-                      <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 0.7 }}
-                        className="absolute inset-0"
-                      >
-                        <img 
-                          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                          alt="Portfolio website" 
-                          className="w-full h-full object-cover"
-                        />
+                <div className="relative h-[460px] rounded-2xl shadow-lg overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10">
+                  {/* Carousel of Projects */}
+                  <motion.div 
+                    className="absolute inset-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <div className="flex flex-col h-full">
+                      {/* Tabs for different project types */}
+                      <div className="flex bg-background/80 backdrop-blur-sm border-b border-white/20 px-3 py-2">
+                        <motion.div 
+                          className="flex items-center gap-2 px-4 py-1.5 rounded-md bg-primary/10 text-sm font-medium"
+                          whileHover={{ backgroundColor: "rgba(var(--primary), 0.2)" }}
+                        >
+                          <Monitor className="h-4 w-4" />
+                          <span>Website</span>
+                        </motion.div>
                         
-                        {/* Overlay with Content */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-6">
-                          <motion.div 
-                            initial={{ y: 10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 1.2, duration: 0.5 }}
-                          >
-                            <h3 className="text-xl font-bold text-white mb-2">Portfolio Website</h3>
-                            <p className="text-white/80 text-sm">Responsive design with modern animations</p>
-                            
-                            {/* Technologies Used */}
-                            <div className="flex gap-2 mt-3">
-                              {["React", "TypeScript", "Tailwind"].map((tech, index) => (
-                                <motion.span
-                                  key={tech}
-                                  className="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs text-white"
-                                  initial={{ opacity: 0, y: 5 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  transition={{ delay: 1.4 + index * 0.1, duration: 0.5 }}
-                                >
-                                  {tech}
-                                </motion.span>
-                              ))}
-                            </div>
-                          </motion.div>
-                        </div>
-                      </motion.div>
-
-                      {/* Floating Element Animation */}
-                      <motion.div
-                        className="absolute top-8 right-8 w-16 h-16 bg-accent/20 backdrop-blur-sm rounded-lg border border-white/10"
-                        animate={{ 
-                          y: [0, -8, 0],
-                          rotate: [0, 5, 0],
-                          scale: [1, 1.05, 1]
-                        }}
-                        transition={{ 
-                          duration: 5, 
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                          ease: "easeInOut"
-                        }}
-                      />
+                        <motion.div 
+                          className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-muted-foreground ml-2"
+                          whileHover={{ color: "hsl(var(--primary))" }}
+                        >
+                          <ChartBar className="h-4 w-4" />
+                          <span>Dashboard</span>
+                        </motion.div>
+                        
+                        <motion.div 
+                          className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-muted-foreground ml-2"
+                          whileHover={{ color: "hsl(var(--primary))" }}
+                        >
+                          <Smartphone className="h-4 w-4" />
+                          <span>Mobile App</span>
+                        </motion.div>
+                      </div>
                       
-                      <motion.div
-                        className="absolute bottom-24 left-8 w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full border border-white/10"
-                        animate={{ 
-                          y: [0, 8, 0],
-                          x: [0, 5, 0],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          duration: 4, 
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                          ease: "easeInOut",
-                          delay: 0.5
-                        }}
-                      />
+                      {/* Website Preview */}
+                      <div className="flex-1 relative overflow-hidden">
+                        <motion.div
+                          className="absolute inset-0"
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
+                          {/* Actual Website Preview */}
+                          <div className="relative h-full w-full overflow-hidden">
+                            {/* Modern Website Design */}
+                            <div className="h-full w-full overflow-y-auto">
+                              {/* Hero Section */}
+                              <div className="h-[180px] bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                                <motion.div 
+                                  className="text-center text-white px-6"
+                                  initial={{ opacity: 0, y: 10 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  transition={{ delay: 0.6, duration: 0.4 }}
+                                >
+                                  <h2 className="text-2xl font-bold">Modern Web Solutions</h2>
+                                  <p className="text-white/80 mt-2">Responsive designs for every device</p>
+                                </motion.div>
+                              </div>
+                              
+                              {/* Features Section */}
+                              <div className="bg-white dark:bg-gray-900 py-8 px-6">
+                                <motion.div
+                                  variants={staggerContainer}
+                                  initial="hidden"
+                                  animate="visible"
+                                >
+                                  <h3 className="text-lg font-medium mb-4 dark:text-white">Our Services</h3>
+                                  
+                                  <div className="grid grid-cols-2 gap-4">
+                                    {[
+                                      { title: "Web Design", icon: "🎨" },
+                                      { title: "Development", icon: "💻" },
+                                      { title: "E-commerce", icon: "🛒" },
+                                      { title: "SEO", icon: "🔍" }
+                                    ].map((item, index) => (
+                                      <motion.div 
+                                        key={item.title}
+                                        variants={fadeInUp}
+                                        className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex items-center gap-3"
+                                      >
+                                        <div className="w-8 h-8 flex items-center justify-center rounded-md bg-primary/10">
+                                          <span className="text-lg">{item.icon}</span>
+                                        </div>
+                                        <span className="text-sm font-medium dark:text-white">{item.title}</span>
+                                      </motion.div>
+                                    ))}
+                                  </div>
+                                </motion.div>
+                              </div>
+                              
+                              {/* Portfolio Preview */}
+                              <div className="py-6 px-6 bg-gray-50 dark:bg-gray-800/50">
+                                <h3 className="text-lg font-medium mb-4 dark:text-white">Recent Projects</h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {[1, 2, 3, 4].map((item) => (
+                                    <motion.div
+                                      key={item}
+                                      className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-lg overflow-hidden"
+                                      whileHover={{ y: -4, scale: 1.02 }}
+                                      transition={{ duration: 0.2 }}
+                                    />
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Floating Elements Animation */}
+                            <motion.div
+                              className="absolute top-16 right-6 w-14 h-14 bg-gradient-to-br from-primary/40 to-accent/20 backdrop-blur-sm rounded-lg border border-white/10"
+                              animate={{ 
+                                y: [0, -8, 0],
+                                rotate: [0, 5, 0],
+                              }}
+                              transition={{ 
+                                duration: 5, 
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "easeInOut"
+                              }}
+                            />
+                          </div>
+                        </motion.div>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
 
                   <motion.div 
-                    className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent"
+                    className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent"
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 0.7 }}
+                    transition={{ delay: 1, duration: 0.5 }}
                   >
-                    <p className="text-lg font-medium text-white">Ready to bring your vision to life?</p>
+                    <div className="flex items-center justify-between">
+                      <p className="text-white font-medium">Ready to get started?</p>
+                      <motion.div 
+                        className="px-3 py-1 rounded-full bg-primary/20 text-xs font-medium text-white backdrop-blur-sm border border-white/10"
+                        whileHover={{ scale: 1.05, backgroundColor: "rgba(var(--primary), 0.3)" }}
+                      >
+                        View Projects
+                      </motion.div>
+                    </div>
                   </motion.div>
                 </div>
               </motion.div>
@@ -151,20 +211,23 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                 className="glass p-8 rounded-xl order-1 md:order-2"
               >
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
                   Contact Information
                 </h2>
                 
-                <div className="space-y-6">
+                <motion.div 
+                  className="space-y-6"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
                   <motion.div 
                     className="flex items-start gap-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
+                    variants={fadeInUp}
                   >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6 text-primary" />
@@ -179,10 +242,7 @@ const Contact = () => {
                   
                   <motion.div 
                     className="flex items-start gap-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    variants={fadeInUp}
                   >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Linkedin className="h-6 w-6 text-primary" />
@@ -202,10 +262,7 @@ const Contact = () => {
                   
                   <motion.div 
                     className="flex items-start gap-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
+                    variants={fadeInUp}
                   >
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Github className="h-6 w-6 text-primary" />
@@ -222,7 +279,7 @@ const Contact = () => {
                       </a>
                     </div>
                   </motion.div>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
