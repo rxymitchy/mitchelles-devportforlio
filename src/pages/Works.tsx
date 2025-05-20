@@ -22,7 +22,6 @@ const Works = () => {
     { id: "javascript", label: "JavaScript", icon: <Code size={18} className="mr-1" /> },
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
-    { id: "node", label: "Node.js" },
     { id: "wordpress", label: "WordPress" },
     { id: "shopify", label: "Shopify" },
     { id: "mysql", label: "MySQL" },

@@ -1,3 +1,4 @@
+
 // Project data
 export const projects = [
   {
@@ -77,7 +78,7 @@ export const projects = [
     title: "Database Management System",
     description: "A comprehensive system utilizing MySQL for database management with Excel dashboards for data visualization.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["MySQL", "Excel", "Data Analysis", "Python"],
+    tags: ["MySQL", "Excel", "Data Analysis", "JavaScript"],
     github: "https://github.com/Powerlearnproject/week-8-rxymitchy",
     live: "",
   },
