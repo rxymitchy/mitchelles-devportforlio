@@ -1,9 +1,10 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects, skills } from "@/utils/data";
 import ProjectCard from "@/components/ProjectCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Code, Cpu, Database, Palette, Zap } from "lucide-react";
+import { Code, Cpu, Database, Excel, Javascript, Palette, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SkillCard from "@/components/SkillCard";
 
@@ -19,12 +20,14 @@ const Works = () => {
 
   const projectFilters = [
     { id: "all", label: "All Projects" },
-    { id: "javascript", label: "JavaScript" },
+    { id: "javascript", label: "JavaScript", icon: <Javascript size={18} className="mr-1" /> },
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
     { id: "node", label: "Node.js" },
     { id: "wordpress", label: "WordPress" },
     { id: "shopify", label: "Shopify" },
+    { id: "mysql", label: "MySQL" },
+    { id: "excel", label: "Excel", icon: <Excel size={18} className="mr-1" /> },
   ];
 
   // Map skill categories to icons
@@ -32,6 +35,7 @@ const Works = () => {
     "Frontend": <Code size={20} />,
     "Backend": <Database size={20} />,
     "CMS & E-commerce": <Zap size={20} />,
+    "AI & ML": <Cpu size={20} />,
     "Other": <Cpu size={20} />,
   };
 
@@ -74,16 +78,17 @@ const Works = () => {
             </h2>
 
             <div className="flex justify-center mb-8 overflow-x-auto pb-4">
-              <div className="flex space-x-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 {projectFilters.map((item) => (
                   <Badge
                     key={item.id}
                     variant={filter === item.id ? "default" : "outline"}
-                    className={`cursor-pointer px-4 py-2 text-sm transition-all duration-300 ${
+                    className={`cursor-pointer px-4 py-2 text-sm transition-all duration-300 flex items-center ${
                       item.id === "javascript" ? "ring-2 ring-yellow-500/30" : ""
                     }`}
                     onClick={() => setFilter(item.id)}
                   >
+                    {item.icon}
                     {item.label}
                   </Badge>
                 ))}

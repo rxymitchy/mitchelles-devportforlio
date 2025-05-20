@@ -72,6 +72,15 @@ export const projects = [
     github: "https://github.com/PLP-WebTechnologies/feb-2025-final-project-and-deployment-rxymitchy",
     live: "https://speciesblog.netlify.app/",
   },
+  {
+    id: 9,
+    title: "Database Management System",
+    description: "A comprehensive system utilizing MySQL for database management with Excel dashboards for data visualization.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["MySQL", "Excel", "Data Analysis", "Python"],
+    github: "https://github.com/Powerlearnproject/week-8-rxymitchy",
+    live: "",
+  },
 ];
 
 // Skills data
