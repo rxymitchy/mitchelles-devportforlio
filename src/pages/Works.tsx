@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { projects, skills } from "@/utils/data";
 import ProjectCard from "@/components/ProjectCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Code, Cpu, Database, Excel, Javascript, Palette, Zap } from "lucide-react";
+import { Code, Cpu, Database, FileSpreadsheet, Palette, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SkillCard from "@/components/SkillCard";
 
@@ -20,14 +20,14 @@ const Works = () => {
 
   const projectFilters = [
     { id: "all", label: "All Projects" },
-    { id: "javascript", label: "JavaScript", icon: <Javascript size={18} className="mr-1" /> },
+    { id: "javascript", label: "JavaScript", icon: <Code size={18} className="mr-1" /> },
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
     { id: "node", label: "Node.js" },
     { id: "wordpress", label: "WordPress" },
     { id: "shopify", label: "Shopify" },
     { id: "mysql", label: "MySQL" },
-    { id: "excel", label: "Excel", icon: <Excel size={18} className="mr-1" /> },
+    { id: "excel", label: "Excel", icon: <FileSpreadsheet size={18} className="mr-1" /> },
   ];
 
   // Map skill categories to icons
