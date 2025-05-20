@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { AtSign, Github, Linkedin, Mail, Smartphone, ChartBar, Monitor } from "lucide-react";
+import { AtSign, Github, Linkedin, Mail, Smartphone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
@@ -51,7 +51,7 @@ const Contact = () => {
         <div className="layout-container">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-              {/* Project Showcase with Smooth Animations */}
+              {/* 3D Project Showcase */}
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -59,150 +59,117 @@ const Contact = () => {
                 variants={fadeInUp}
                 className="order-2 md:order-1"
               >
-                <div className="relative h-[460px] rounded-2xl shadow-lg overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10">
-                  {/* Carousel of Projects */}
-                  <motion.div 
-                    className="absolute inset-0"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <div className="flex flex-col h-full">
-                      {/* Tabs for different project types */}
-                      <div className="flex bg-background/80 backdrop-blur-sm border-b border-white/20 px-3 py-2">
-                        <motion.div 
-                          className="flex items-center gap-2 px-4 py-1.5 rounded-md bg-primary/10 text-sm font-medium"
-                          whileHover={{ backgroundColor: "rgba(var(--primary), 0.2)" }}
-                        >
-                          <Monitor className="h-4 w-4" />
-                          <span>Website</span>
-                        </motion.div>
-                        
-                        <motion.div 
-                          className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-muted-foreground ml-2"
-                          whileHover={{ color: "hsl(var(--primary))" }}
-                        >
-                          <ChartBar className="h-4 w-4" />
-                          <span>Dashboard</span>
-                        </motion.div>
-                        
-                        <motion.div 
-                          className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-muted-foreground ml-2"
-                          whileHover={{ color: "hsl(var(--primary))" }}
-                        >
-                          <Smartphone className="h-4 w-4" />
-                          <span>Mobile App</span>
-                        </motion.div>
+                <div className="relative h-[460px] rounded-2xl shadow-lg overflow-hidden perspective-1000">
+                  {/* 3D Floating Projects */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10 rounded-xl" />
+                    
+                    {/* Web Project */}
+                    <motion.div
+                      className="absolute w-64 h-48 bg-gradient-to-br from-blue-600/90 to-violet-600/90 rounded-lg overflow-hidden shadow-xl border border-white/20"
+                      animate={{ 
+                        x: [0, -20, 0], 
+                        y: [0, 15, 0],
+                        rotateX: [0, 5, 0],
+                        rotateY: [0, -10, 0],
+                        z: [0, 20, 0]
+                      }}
+                      transition={{ 
+                        duration: 10,
+                        repeat: Infinity,
+                        repeatType: "reverse" 
+                      }}
+                      style={{ translateZ: "20px" }}
+                    >
+                      <div className="absolute inset-0 p-4 flex flex-col">
+                        <div className="flex space-x-1 mb-2">
+                          <div className="w-2 h-2 rounded-full bg-red-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                        </div>
+                        <div className="flex-1 flex items-center justify-center">
+                          <img src="/lovable-uploads/4bb40c0c-eaa2-4f0d-ba10-f11d3e69fdab.png" alt="Web Application" className="max-w-full max-h-full object-contain" />
+                        </div>
+                        <div className="mt-2 text-center text-white font-medium text-sm">
+                          Web Application
+                        </div>
                       </div>
-                      
-                      {/* Website Preview */}
-                      <div className="flex-1 relative overflow-hidden">
-                        <motion.div
-                          className="absolute inset-0"
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.5, ease: "easeOut" }}
-                        >
-                          {/* Actual Website Preview */}
-                          <div className="relative h-full w-full overflow-hidden">
-                            {/* Modern Website Design */}
-                            <div className="h-full w-full overflow-y-auto">
-                              {/* Hero Section */}
-                              <div className="h-[180px] bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-                                <motion.div 
-                                  className="text-center text-white px-6"
-                                  initial={{ opacity: 0, y: 10 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  transition={{ delay: 0.6, duration: 0.4 }}
-                                >
-                                  <h2 className="text-2xl font-bold">Modern Web Solutions</h2>
-                                  <p className="text-white/80 mt-2">Responsive designs for every device</p>
-                                </motion.div>
-                              </div>
-                              
-                              {/* Features Section */}
-                              <div className="bg-white dark:bg-gray-900 py-8 px-6">
-                                <motion.div
-                                  variants={staggerContainer}
-                                  initial="hidden"
-                                  animate="visible"
-                                >
-                                  <h3 className="text-lg font-medium mb-4 dark:text-white">Our Services</h3>
-                                  
-                                  <div className="grid grid-cols-2 gap-4">
-                                    {[
-                                      { title: "Web Design", icon: "🎨" },
-                                      { title: "Development", icon: "💻" },
-                                      { title: "E-commerce", icon: "🛒" },
-                                      { title: "SEO", icon: "🔍" }
-                                    ].map((item, index) => (
-                                      <motion.div 
-                                        key={item.title}
-                                        variants={fadeInUp}
-                                        className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex items-center gap-3"
-                                      >
-                                        <div className="w-8 h-8 flex items-center justify-center rounded-md bg-primary/10">
-                                          <span className="text-lg">{item.icon}</span>
-                                        </div>
-                                        <span className="text-sm font-medium dark:text-white">{item.title}</span>
-                                      </motion.div>
-                                    ))}
-                                  </div>
-                                </motion.div>
-                              </div>
-                              
-                              {/* Portfolio Preview */}
-                              <div className="py-6 px-6 bg-gray-50 dark:bg-gray-800/50">
-                                <h3 className="text-lg font-medium mb-4 dark:text-white">Recent Projects</h3>
-                                <div className="grid grid-cols-2 gap-3">
-                                  {[1, 2, 3, 4].map((item) => (
-                                    <motion.div
-                                      key={item}
-                                      className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-lg overflow-hidden"
-                                      whileHover={{ y: -4, scale: 1.02 }}
-                                      transition={{ duration: 0.2 }}
-                                    />
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
+                    </motion.div>
 
-                            {/* Floating Elements Animation */}
-                            <motion.div
-                              className="absolute top-16 right-6 w-14 h-14 bg-gradient-to-br from-primary/40 to-accent/20 backdrop-blur-sm rounded-lg border border-white/10"
-                              animate={{ 
-                                y: [0, -8, 0],
-                                rotate: [0, 5, 0],
-                              }}
-                              transition={{ 
-                                duration: 5, 
-                                repeat: Infinity,
-                                repeatType: "reverse",
-                                ease: "easeInOut"
-                              }}
-                            />
-                          </div>
-                        </motion.div>
+                    {/* Dashboard Project */}
+                    <motion.div
+                      className="absolute w-60 h-44 bg-gradient-to-br from-indigo-600/90 to-purple-600/90 rounded-lg overflow-hidden shadow-xl border border-white/20"
+                      animate={{ 
+                        x: [0, 30, 0], 
+                        y: [0, -20, 0],
+                        rotateX: [0, -5, 0],
+                        rotateY: [0, 15, 0],
+                        z: [0, 40, 0]
+                      }}
+                      transition={{ 
+                        duration: 12,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        delay: 0.5
+                      }}
+                      style={{ translateZ: "40px" }}
+                    >
+                      <div className="absolute inset-0 p-4 flex flex-col">
+                        <div className="flex space-x-1 mb-2">
+                          <div className="w-2 h-2 rounded-full bg-red-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                        </div>
+                        <div className="flex-1 flex items-center justify-center">
+                          <img src="/lovable-uploads/4bb40c0c-eaa2-4f0d-ba10-f11d3e69fdab.png" alt="Analytics Dashboard" className="max-w-full max-h-full object-contain" />
+                        </div>
+                        <div className="mt-2 text-center text-white font-medium text-sm">
+                          Analytics Dashboard
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
 
-                  <motion.div 
-                    className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent"
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                  >
-                    <div className="flex items-center justify-between">
-                      <p className="text-white font-medium">Ready to get started?</p>
-                      <motion.div 
-                        className="px-3 py-1 rounded-full bg-primary/20 text-xs font-medium text-white backdrop-blur-sm border border-white/10"
-                        whileHover={{ scale: 1.05, backgroundColor: "rgba(var(--primary), 0.3)" }}
-                      >
-                        View Projects
-                      </motion.div>
-                    </div>
-                  </motion.div>
+                    {/* Mobile App Project */}
+                    <motion.div
+                      className="absolute w-36 h-56 bg-gradient-to-br from-emerald-600/90 to-blue-600/90 rounded-lg overflow-hidden shadow-xl border border-white/20"
+                      animate={{ 
+                        x: [0, -25, 0], 
+                        y: [0, -35, 0],
+                        rotateX: [0, 10, 0],
+                        rotateY: [0, -5, 0],
+                        z: [0, 60, 0]
+                      }}
+                      transition={{ 
+                        duration: 8,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        delay: 1
+                      }}
+                      style={{ translateZ: "60px" }}
+                    >
+                      <div className="absolute inset-0 p-2 flex flex-col">
+                        <div className="mx-auto w-10 h-1 bg-gray-300/50 rounded-full mb-2"></div>
+                        <div className="flex-1 flex items-center justify-center">
+                          <img src="/lovable-uploads/4bb40c0c-eaa2-4f0d-ba10-f11d3e69fdab.png" alt="Mobile App" className="max-w-full max-h-full object-contain" />
+                        </div>
+                        <div className="mt-2 text-center text-white font-medium text-xs">
+                          Mobile App
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* "Ready to bring your ideas to life?" text */}
+                    <motion.div 
+                      className="absolute bottom-8 left-0 right-0 text-center"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1, duration: 0.8 }}
+                    >
+                      <p className="text-lg font-medium text-white/90 drop-shadow-lg px-4">
+                        Ready to bring your ideas to life?
+                      </p>
+                    </motion.div>
+                  </div>
                 </div>
               </motion.div>
               

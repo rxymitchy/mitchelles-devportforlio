@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects, skills } from "@/utils/data";
@@ -20,6 +19,7 @@ const Works = () => {
 
   const projectFilters = [
     { id: "all", label: "All Projects" },
+    { id: "javascript", label: "JavaScript" },
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
     { id: "node", label: "Node.js" },
@@ -79,7 +79,9 @@ const Works = () => {
                   <Badge
                     key={item.id}
                     variant={filter === item.id ? "default" : "outline"}
-                    className="cursor-pointer px-4 py-2 text-sm transition-all duration-300"
+                    className={`cursor-pointer px-4 py-2 text-sm transition-all duration-300 ${
+                      item.id === "javascript" ? "ring-2 ring-yellow-500/30" : ""
+                    }`}
                     onClick={() => setFilter(item.id)}
                   >
                     {item.label}
