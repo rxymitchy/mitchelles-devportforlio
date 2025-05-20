@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   // Animation variants for smoother transitions
@@ -166,26 +165,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-12 md:py-16 relative">
-        <div className="absolute -z-10 top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vh] bg-gradient-radial from-primary/10 via-accent/5 to-transparent blur-3xl" />
-        
-        <motion.div 
-          className="layout-container"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <div className="max-w-xl mx-auto text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Send Me a Message</h2>
-            <p className="text-muted-foreground">I'll get back to you as soon as possible</p>
-          </div>
-          
-          <ContactForm />
-        </motion.div>
       </section>
     </div>
   );
