@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
 
@@ -50,28 +49,27 @@ const Contact = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10 rounded-xl" />
                   
-                  {/* Analytics Dashboard Image */}
+                  {/* Enhanced 3D motion for the image */}
                   <motion.div
                     className="absolute w-[320px] h-[200px] rounded-lg overflow-hidden shadow-xl border border-border"
                     animate={{ 
-                      scale: [1, 1.02, 1],
-                      rotateX: [-1, 1, -1],
-                      rotateY: [-1, 1, -1],
+                      scale: [1, 1.05, 1],
+                      rotateX: [-3, 3, -3],
+                      rotateY: [-3, 3, -3],
+                      z: [0, 10, 0]
                     }}
                     transition={{ 
-                      duration: 6,
+                      duration: 8,
                       repeat: Infinity,
-                      repeatType: "reverse"
+                      repeatType: "reverse",
+                      ease: "easeInOut"
                     }}
                   >
                     <img 
                       src="/lovable-uploads/4bb40c0c-eaa2-4f0d-ba10-f11d3e69fdab.png" 
-                      alt="Analytics Dashboard" 
+                      alt="Project preview" 
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-center">
-                      Analytics Dashboard
-                    </div>
                   </motion.div>
                   
                   {/* Ready to bring your ideas to life? text */}

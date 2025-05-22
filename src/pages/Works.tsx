@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects, skills } from "@/utils/data";
@@ -25,7 +26,7 @@ const Works = () => {
     { id: "wordpress", label: "WordPress" },
     { id: "shopify", label: "Shopify" },
     { id: "mysql", label: "MySQL" },
-    { id: "excel", label: "Excel", icon: <FileSpreadsheet size={18} className="mr-1" /> },
+    { id: "data analysis", label: "Data Analysis", icon: <FileSpreadsheet size={18} className="mr-1" /> },
   ];
 
   // Map skill categories to icons
