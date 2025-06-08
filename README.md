@@ -7,7 +7,7 @@ A modern, responsive portfolio website showcasing my work as a software engineer
 
 This portfolio website presents my professional journey, technical skills, and featured projects. Built with modern web technologies, it demonstrates my expertise in full-stack development and my passion for creating exceptional digital experiences.
 
-**Live Portfolio**: https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458
+**Live Portfolio**: https://mitchelles-devportforlio.lovable.app/
 
 ## Features
 
@@ -59,14 +59,14 @@ npm run dev
 Feel free to reach out for collaborations, opportunities, or just to connect:
 
 - **Email**: lucianamitchell19@gmail.com
-- **LinkedIn**: [Mitchell Ashimosi](https://www.linkedin.com/in/mitchelle-ashimosi/)
+- **LinkedIn**: [Mitchelle A](https://www.linkedin.com/in/mitchelle-ashimosi/)
 - **GitHub**: [rxymitchy](https://github.com/rxymitchy)
 
 ## Deployment
 
 This portfolio is deployed using Lovable's platform. To deploy your own version:
 
-1. Open the project in [Lovable](https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458)
+1. Open & Create your project in lovable
 2. Click on Share → Publish
 3. Your portfolio will be live with a custom URL
 
