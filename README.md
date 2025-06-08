@@ -1,69 +1,77 @@
-# Welcome to your Lovable project
 
-## Project info
+# Mitchelle's Portfolio
 
-**URL**: https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458
+A modern, responsive portfolio website showcasing my work as a software engineer, AI enthusiast, and web developer.
 
-## How can I edit this code?
+## About This Portfolio
 
-There are several ways of editing your application.
+This portfolio website presents my professional journey, technical skills, and featured projects. Built with modern web technologies, it demonstrates my expertise in full-stack development and my passion for creating exceptional digital experiences.
 
-**Use Lovable**
+**Live Portfolio**: https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Interactive Animations**: Smooth transitions and engaging visual effects using Framer Motion
+- **Project Showcase**: Detailed presentation of my work across various technologies
+- **Skills Overview**: Comprehensive display of technical expertise organized by categories
+- **Contact Integration**: Easy ways to connect and collaborate
+- **Modern UI/UX**: Clean, professional design with dark/light theme support
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This portfolio is built with cutting-edge technologies:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: Shadcn/ui component library
+- **Animations**: Framer Motion for smooth interactions
+- **Build Tool**: Vite for fast development and optimized builds
+- **Deployment**: Lovable platform hosting
 
-Follow these steps:
+## Sections
+
+- **Home**: Introduction and overview of services
+- **About**: Personal journey and professional philosophy  
+- **Works & Skills**: Project portfolio and technical expertise
+- **Contact**: Professional contact information and social links
+
+## Local Development
+
+To run this portfolio locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Contact
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Feel free to reach out for collaborations, opportunities, or just to connect:
 
-**Use GitHub Codespaces**
+- **Email**: lucianamitchell19@gmail.com
+- **LinkedIn**: [Mitchell Ashimosi](https://www.linkedin.com/in/mitchelle-ashimosi/)
+- **GitHub**: [rxymitchy](https://github.com/rxymitchy)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+This portfolio is deployed using Lovable's platform. To deploy your own version:
 
-This project is built with .
+1. Open the project in [Lovable](https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458)
+2. Click on Share → Publish
+3. Your portfolio will be live with a custom URL
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+For custom domain setup, upgrade to a paid Lovable plan and configure in Project Settings → Domains.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/0968ddce-d507-433c-95a2-3098501b9458) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+*This portfolio represents my commitment to clean code, modern design, and exceptional user experiences. Every project showcased here reflects my dedication to delivering high-quality digital solutions.*
