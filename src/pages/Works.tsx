@@ -24,8 +24,6 @@ const Works = () => {
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
     { id: "wordpress", label: "WordPress" },
-    { id: "shopify", label: "Shopify" },
-    { id: "mysql", label: "MySQL" },
     { id: "data analysis", label: "Data Analysis", icon: <FileSpreadsheet size={18} className="mr-1" /> },
   ];
 
