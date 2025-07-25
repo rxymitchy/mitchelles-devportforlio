@@ -53,17 +53,23 @@ const Contact = () => {
                   <motion.div
                     className="absolute w-[280px] h-[180px] rounded-lg overflow-hidden shadow-xl border border-border"
                     animate={{ 
-                      scale: [1, 1.08, 1],
-                      rotateX: [-5, 5, -5],
-                      rotateY: [-8, 8, -8],
-                      z: [0, 20, 0],
-                      x: [-10, 10, -10]
+                      scale: [1, 1.05, 1],
+                      rotateX: [-3, 3, -3],
+                      rotateY: [-5, 5, -5],
+                      z: [0, 15, 0],
+                      x: [-15, 15, -15],
+                      y: [-8, 8, -8]
                     }}
                     transition={{ 
-                      duration: 12,
+                      duration: 8,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut"
+                    }}
+                    style={{
+                      left: '50%',
+                      top: '40%',
+                      transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <img 
@@ -73,31 +79,65 @@ const Contact = () => {
                     />
                   </motion.div>
                   
-                  {/* Secondary floating element */}
+                  {/* Analytics Dashboard - Top Right */}
                   <motion.div
-                    className="absolute w-[120px] h-[80px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-80"
+                    className="absolute w-[140px] h-[90px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-85"
                     animate={{ 
-                      scale: [1, 1.1, 1],
-                      rotateX: [3, -3, 3],
-                      rotateY: [5, -5, 5],
-                      z: [0, 15, 0],
-                      x: [20, -20, 20],
-                      y: [-20, 20, -20]
+                      scale: [1, 1.08, 1],
+                      rotateX: [2, -4, 2],
+                      rotateY: [-3, 6, -3],
+                      z: [0, 12, 0],
+                      x: [8, -8, 8],
+                      y: [5, -5, 5]
                     }}
                     transition={{ 
-                      duration: 10,
+                      duration: 6,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut",
-                      delay: 2
+                      delay: 1
                     }}
                     style={{
-                      right: '20px',
-                      top: '60px'
+                      right: '15px',
+                      top: '45px'
                     }}
                   >
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <div className="w-8 h-8 rounded-full bg-primary/30" />
+                    <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center border border-blue-400/30">
+                      <div className="flex flex-col gap-1 items-center">
+                        <div className="w-6 h-6 rounded bg-blue-400/40" />
+                        <div className="text-xs text-blue-200 font-medium">Analytics</div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Mobile App - Bottom Left */}
+                  <motion.div
+                    className="absolute w-[100px] h-[120px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-90"
+                    animate={{ 
+                      scale: [1, 1.06, 1],
+                      rotateX: [-2, 4, -2],
+                      rotateY: [4, -2, 4],
+                      z: [0, 10, 0],
+                      x: [-6, 6, -6],
+                      y: [8, -8, 8]
+                    }}
+                    transition={{ 
+                      duration: 7,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                      delay: 3
+                    }}
+                    style={{
+                      left: '25px',
+                      bottom: '80px'
+                    }}
+                  >
+                    <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center border border-purple-400/30">
+                      <div className="flex flex-col gap-1 items-center">
+                        <div className="w-5 h-5 rounded bg-purple-400/40" />
+                        <div className="text-xs text-purple-200 font-medium">Mobile</div>
+                      </div>
                     </div>
                   </motion.div>
                   

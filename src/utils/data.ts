@@ -120,9 +120,9 @@ export const skills = [
     category: "CMS & E-commerce",
     items: [
       { name: "WordPress", level: 90, color: "bg-blue-700" },
-      { name: "Shopify", level: 85, color: "bg-green-700" },
       { name: "Webflow", level: 80, color: "bg-blue-500" },
       { name: "Wix", level: 85, color: "bg-indigo-400" },
+      { name: "Odoo", level: 85, color: "bg-purple-600" },
     ],
   },
   {
