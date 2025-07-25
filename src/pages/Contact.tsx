@@ -44,37 +44,66 @@ const Contact = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7 }}
-                className="relative h-[340px] rounded-2xl shadow-lg overflow-hidden perspective-1000"
+                className="relative h-[400px] rounded-2xl shadow-lg overflow-hidden perspective-1000"
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10 rounded-xl" />
                   
-                  {/* Enhanced 3D motion for the image */}
+                  {/* Enhanced 3D motion for the main image */}
                   <motion.div
-                    className="absolute w-[320px] h-[200px] rounded-lg overflow-hidden shadow-xl border border-border"
+                    className="absolute w-[280px] h-[180px] rounded-lg overflow-hidden shadow-xl border border-border"
                     animate={{ 
-                      scale: [1, 1.05, 1],
-                      rotateX: [-3, 3, -3],
-                      rotateY: [-3, 3, -3],
-                      z: [0, 10, 0]
+                      scale: [1, 1.08, 1],
+                      rotateX: [-5, 5, -5],
+                      rotateY: [-8, 8, -8],
+                      z: [0, 20, 0],
+                      x: [-10, 10, -10]
                     }}
                     transition={{ 
-                      duration: 8,
+                      duration: 12,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut"
                     }}
                   >
                     <img 
-                      src="/lovable-uploads/4bb40c0c-eaa2-4f0d-ba10-f11d3e69fdab.png" 
-                      alt="Project preview" 
-                      className="w-full h-full object-cover"
+                      src="/lovable-uploads/8dcadd45-8ca3-4253-af64-74722fd81d86.png" 
+                      alt="Web Application Dashboard" 
+                      className="w-full h-full object-contain bg-gradient-to-br from-slate-800 to-slate-900"
                     />
+                  </motion.div>
+                  
+                  {/* Secondary floating element */}
+                  <motion.div
+                    className="absolute w-[120px] h-[80px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-80"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      rotateX: [3, -3, 3],
+                      rotateY: [5, -5, 5],
+                      z: [0, 15, 0],
+                      x: [20, -20, 20],
+                      y: [-20, 20, -20]
+                    }}
+                    transition={{ 
+                      duration: 10,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                      delay: 2
+                    }}
+                    style={{
+                      right: '20px',
+                      top: '60px'
+                    }}
+                  >
+                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-primary/30" />
+                    </div>
                   </motion.div>
                   
                   {/* Ready to bring your ideas to life? text */}
                   <motion.div 
-                    className="absolute bottom-8 left-0 right-0 text-center"
+                    className="absolute bottom-12 left-0 right-0 text-center"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
