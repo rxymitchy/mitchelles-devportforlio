@@ -2,6 +2,15 @@
 export const projects = [
   {
     id: 1,
+    title: "ISP Kenya",
+    description: "A comprehensive SaaS platform for Internet Service Providers featuring billing solutions, network automation, and customer management built with WordPress.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["WordPress", "SaaS", "Business", "ISP Management", "PHP"],
+    github: "",
+    live: "https://ispkenya.co.ke/",
+  },
+  {
+    id: 2,
     title: "Book Borrowing Nook",
     description: "A MERN stack application for managing book borrowing with user authentication and admin dashboard.",
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -10,7 +19,7 @@ export const projects = [
     live: "https://book-borrowing-nook.lovable.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "MERNGalaxy Shop",
     description: "E-commerce platform built with MERN stack featuring product catalog, cart management, and payment integration.",
     image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -19,7 +28,7 @@ export const projects = [
     live: "https://merngalaxy-shop.lovable.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Land Resource Utilization",
     description: "Flask-based web application for land resource management and utilization tracking.",
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2232&q=80",
@@ -28,7 +37,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Malprime Scents",
     description: "Shopify e-commerce store for a premium scent and fragrance brand with custom theme and product showcase.",
     image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -37,7 +46,7 @@ export const projects = [
     live: "https://malprimescents.myshopify.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Amulyoto & Co.Advocates",
     description: "WordPress website for information and legal resources with custom content management.",
     image: "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -46,7 +55,7 @@ export const projects = [
     live: "https://infoamulaw.wordpress.com/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Purity Mureithi & Co. Advocates",
     description: "Professional WordPress website for a law firm with appointment scheduling and resource library.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -55,7 +64,7 @@ export const projects = [
     live: "https://puritymureithiadvocates.wordpress.com/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Stroke Prediction System",
     description: "Python-based predictive model using machine learning to assess stroke risk based on health parameters.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -64,7 +73,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "Species Blog",
     description: "An informative blog about various species using HTML, CSS, and JavaScript.",
     image: "https://images.unsplash.com/photo-1550685780-886ba7b2d9c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -73,11 +82,11 @@ export const projects = [
     live: "https://speciesblog.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "Database Management System",
-    description: "A comprehensive system utilizing MySQL for database management with Excel dashboards for data visualization.",
+    description: "A comprehensive system utilizing MySQL for database management with Data Analysis dashboards for data visualization.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["MySQL", "Excel", "Data Analysis"],
+    tags: ["MySQL", "Data Analysis", "Database Management"],
     github: "https://github.com/Powerlearnproject/week-8-rxymitchy",
     live: "",
   },
