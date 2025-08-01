@@ -36,119 +36,111 @@ const Contact = () => {
       {/* Contact Content Section */}
       <section className="py-12 md:py-20">
         <div className="layout-container">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-              {/* Left column - Projects Preview */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left column - Interactive Projects Display */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7 }}
-                className="relative h-[400px] rounded-2xl shadow-lg overflow-hidden perspective-1000"
+                className="relative h-[350px] rounded-2xl overflow-hidden"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 border border-white/10 rounded-xl" />
-                  
-                  {/* Main Web Application */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 border border-border/50 rounded-xl backdrop-blur-sm">
+                  {/* Web Application */}
                   <motion.div
-                    className="absolute w-[280px] h-[180px] rounded-lg overflow-hidden shadow-xl border border-border"
+                    className="absolute w-[200px] h-[140px] rounded-lg overflow-hidden shadow-lg border border-border bg-card"
                     animate={{ 
-                      scale: [1, 1.03, 1],
-                      rotateX: [-2, 2, -2],
-                      rotateY: [-3, 3, -3],
-                      z: [0, 10, 0],
-                      x: [-8, 8, -8],
-                      y: [-5, 5, -5]
+                      scale: [1, 1.05, 1],
+                      rotateY: [-2, 2, -2],
+                      x: [-5, 5, -5],
+                      y: [-3, 3, -3]
                     }}
                     transition={{ 
-                      duration: 9,
+                      duration: 8,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut"
                     }}
                     style={{
                       left: '50%',
-                      top: '45%',
+                      top: '40%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <img 
                       src="/lovable-uploads/8dcadd45-8ca3-4253-af64-74722fd81d86.png" 
-                      alt="Web Application Dashboard" 
-                      className="w-full h-full object-contain bg-gradient-to-br from-slate-800 to-slate-900"
+                      alt="Web Application" 
+                      className="w-full h-full object-contain"
                     />
                   </motion.div>
                   
-                  {/* Analytics Dashboard - Floating independently */}
+                  {/* Analytics Dashboard */}
                   <motion.div
-                    className="absolute w-[120px] h-[80px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-85 bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
+                    className="absolute w-[100px] h-[70px] rounded-lg border border-border/50 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm"
                     animate={{ 
                       scale: [1, 1.1, 1],
-                      rotateX: [3, -5, 3],
-                      rotateY: [-4, 6, -4],
-                      z: [0, 18, 0],
-                      x: [12, -12, 12],
-                      y: [8, -8, 8]
-                    }}
-                    transition={{ 
-                      duration: 7,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut",
-                      delay: 1.5
-                    }}
-                    style={{
-                      right: '25px',
-                      top: '35px'
-                    }}
-                  >
-                    <div className="w-full h-full flex items-center justify-center border border-blue-400/30 rounded-lg">
-                      <div className="flex flex-col gap-1 items-center">
-                        <div className="w-6 h-6 rounded bg-blue-400/50" />
-                        <div className="text-xs text-blue-200 font-semibold">Analytics</div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Mobile App - Floating independently */}
-                  <motion.div
-                    className="absolute w-[90px] h-[110px] rounded-lg overflow-hidden shadow-lg border border-border/50 opacity-90 bg-gradient-to-br from-purple-500/20 to-pink-500/20"
-                    animate={{ 
-                      scale: [1, 1.08, 1],
-                      rotateX: [-3, 5, -3],
-                      rotateY: [5, -3, 5],
-                      z: [0, 15, 0],
-                      x: [-10, 10, -10],
-                      y: [10, -10, 10]
+                      rotateY: [3, -3, 3],
+                      x: [8, -8, 8],
+                      y: [5, -5, 5]
                     }}
                     transition={{ 
                       duration: 6,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut",
-                      delay: 3
+                      delay: 1
                     }}
                     style={{
-                      left: '35px',
-                      bottom: '75px'
+                      right: '30px',
+                      top: '60px'
                     }}
                   >
-                    <div className="w-full h-full flex items-center justify-center border border-purple-400/30 rounded-lg">
-                      <div className="flex flex-col gap-1 items-center">
-                        <div className="w-5 h-5 rounded bg-purple-400/50" />
-                        <div className="text-xs text-purple-200 font-semibold">Mobile</div>
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-4 h-4 rounded bg-blue-400/60 mx-auto mb-1" />
+                        <div className="text-xs text-blue-200 font-medium">Analytics</div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Mobile App */}
+                  <motion.div
+                    className="absolute w-[70px] h-[90px] rounded-lg border border-border/50 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm"
+                    animate={{ 
+                      scale: [1, 1.08, 1],
+                      rotateY: [-4, 4, -4],
+                      x: [-6, 6, -6],
+                      y: [7, -7, 7]
+                    }}
+                    transition={{ 
+                      duration: 7,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                      delay: 2
+                    }}
+                    style={{
+                      left: '40px',
+                      bottom: '80px'
+                    }}
+                  >
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-3 h-3 rounded bg-purple-400/60 mx-auto mb-1" />
+                        <div className="text-xs text-purple-200 font-medium">Mobile</div>
                       </div>
                     </div>
                   </motion.div>
                   
-                  {/* Ready to bring your ideas to life? text */}
+                  {/* Call to action */}
                   <motion.div 
-                    className="absolute bottom-12 left-0 right-0 text-center"
+                    className="absolute bottom-6 left-0 right-0 text-center"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                   >
-                    <p className="text-xl font-semibold text-white/90 drop-shadow-lg px-4">
+                    <p className="text-lg font-medium text-foreground/90 px-4">
                       Ready to bring your ideas to life?
                     </p>
                   </motion.div>
