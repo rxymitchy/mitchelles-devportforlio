@@ -11,6 +11,15 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Malprime Scents - Brand Design Portfolio",
+    description: "Complete social media management, video editing, and graphic design portfolio featuring Instagram content, promotional videos, and brand visuals for premium scent brand.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    tags: ["Graphic Design", "Video Editing", "Social Media", "Branding"],
+    github: "",
+    live: "https://www.instagram.com/malprimescents?igsh=MTBvZWo2cmpjemllcA%3D%3D&utm_source=qr",
+  },
+  {
+    id: 3,
     title: "Amulyoto & Co.Advocates",
     description: "WordPress website for information and legal resources with custom content management.",
     image: "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -19,7 +28,7 @@ export const projects = [
     live: "https://infoamulaw.wordpress.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Purity Mureithi & Co. Advocates",
     description: "Professional WordPress website for a law firm with appointment scheduling and resource library.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -28,8 +37,8 @@ export const projects = [
     live: "https://puritymureithiadvocates.wordpress.com/",
   },
   {
-    id: 4,
-    title: "Malprime Scents",
+    id: 5,
+    title: "Malprime Scents E-commerce",
     description: "E-commerce store for a premium scent and fragrance brand with custom theme and product showcase built on Odoo.",
     image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["Odoo", "E-commerce", "JavaScript"],
@@ -37,7 +46,7 @@ export const projects = [
     live: "https://malprimescents.odoo.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Species Blog",
     description: "An informative blog about various species using HTML, CSS, and JavaScript.",
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -46,7 +55,7 @@ export const projects = [
     live: "https://speciesblog.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "MERNGalaxy Shop",
     description: "E-commerce platform built with MERN stack featuring product catalog, cart management, and payment integration.",
     image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -55,7 +64,7 @@ export const projects = [
     live: "https://merngalaxy-shop.lovable.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Book Borrowing Nook",
     description: "A MERN stack application for managing book borrowing with user authentication and admin dashboard.",
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -64,7 +73,7 @@ export const projects = [
     live: "https://book-borrowing-nook.lovable.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Database Management System",
     description: "A comprehensive system utilizing MySQL for database management with Data Analysis dashboards for data visualization.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -73,7 +82,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "Stroke Prediction System",
     description: "Python-based predictive model using machine learning to assess stroke risk based on health parameters.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -82,7 +91,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "Land Resource Utilization",
     description: "Flask-based web application for land resource management and utilization tracking.",
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2232&q=80",

@@ -20,6 +20,7 @@ const Works = () => {
 
   const projectFilters = [
     { id: "all", label: "All Projects" },
+    { id: "graphic design", label: "Graphic Design", icon: <Palette size={18} className="mr-1" /> },
     { id: "javascript", label: "JavaScript", icon: <Code size={18} className="mr-1" /> },
     { id: "python", label: "Python" },
     { id: "react", label: "React" },
